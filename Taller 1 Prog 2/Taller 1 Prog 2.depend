@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1637073512 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\boolean.cpp
+	"boolean.h"
+
+1637073512 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\boolean.h
+	<stdio.h>
+
