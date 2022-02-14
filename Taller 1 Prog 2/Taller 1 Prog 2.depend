@@ -1,7 +1,30 @@
 # depslib dependency file v1.0
-1637073512 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\boolean.cpp
+1644810772 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\abbsecuencias.cpp
+	"ABBSecuencias.h"
+
+1644811279 c:\users\nlaur\documents\github\taller\taller 1 prog 2\abbsecuencias.h
+	"Secuencia.h"
+
+1644811214 c:\users\nlaur\documents\github\taller\taller 1 prog 2\secuencia.h
+	"ListaNum.h"
+	"stringD.h"
+
+1644812047 c:\users\nlaur\documents\github\taller\taller 1 prog 2\listanum.h
+	"boolean.h"
+	"stringD.h"
+
+1644711592 c:\users\nlaur\documents\github\taller\taller 1 prog 2\boolean.h
+	<stdio.h>
+
+1644812148 c:\users\nlaur\documents\github\taller\taller 1 prog 2\stringd.h
 	"boolean.h"
 
-1637073512 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\boolean.h
-	<stdio.h>
+1644810772 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\arreglocomandos.cpp
+	"ArregloComandos.h"
+
+1644811449 c:\users\nlaur\documents\github\taller\taller 1 prog 2\arreglocomandos.h
+	"Comando.h"
+
+1644811329 c:\users\nlaur\documents\github\taller\taller 1 prog 2\comando.h
+	"stringD.h"
 

@@ -32,11 +32,30 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="ABBSecuencias.cpp" />
+		<Unit filename="ABBSecuencias.h" />
+		<Unit filename="ArregloComandos.cpp" />
+		<Unit filename="ArregloComandos.h" />
+		<Unit filename="ArregloPalabras.cpp" />
+		<Unit filename="ArregloPalabras.h" />
+		<Unit filename="Comando.cpp" />
+		<Unit filename="Comando.h" />
+		<Unit filename="ListaNum.cpp" />
+		<Unit filename="ListaNum.h" />
+		<Unit filename="Secuencia.cpp" />
+		<Unit filename="Secuencia.h" />
+		<Unit filename="Validaciones.cpp" />
+		<Unit filename="Validaciones.h" />
 		<Unit filename="boolean.cpp" />
 		<Unit filename="boolean.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="stringD.cpp" />
+		<Unit filename="stringD.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
+			<code_completion />
+			<envvars />
+			<debugger />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
