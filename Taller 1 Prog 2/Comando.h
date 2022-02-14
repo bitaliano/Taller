@@ -14,7 +14,7 @@ void devuelveNomCom (Comando com, stringD &s);
 int devuelveCantParam (Comando com);
 //devuelve la cantidad de parámetros que permite un comando
 
-void levantarComArchivo (Comando com, stringD f);
+void levantarComArchivo (Comando &com, FILE *f);
 //abre el archivo y carga el arreglo de comandos
 
 

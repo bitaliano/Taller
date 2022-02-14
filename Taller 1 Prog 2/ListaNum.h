@@ -22,9 +22,6 @@ void mostrarLista (ListaNum l);
 int sumarValores (ListaNum l);
 //suma los valores de la lista
 
-void insFrontLista (ListaNum &l, int num);
-//dada una lista y un valor, ingresa el valor al principio de la lista
-
 void insertarAtras (ListaNum &l, int num);
 //dada una lista y un valor, ingresa el valor al final de la lista.
 

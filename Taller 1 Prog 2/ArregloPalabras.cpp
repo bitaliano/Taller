@@ -4,16 +4,16 @@
 
 void cargarArregloP (ArregloPalabras &arreP, stringD s){
     boolean lleno = FALSE;
-    tope=0;
+    arreP.tope=0;
     if ((texto[i]!='\0') && (texto[i]!=' ')) {
-        //Guardo puntero de comienzo palabra
+        //Guardo indice de comienzo palabra
         k=i;
     }
     while (texto[i]!='\0' && !lleno ) {
         if ((texto[i]==' ') && (texto[i+1]!=' ') && (texto[i+1]!='\0')) {
-            //Guardo puntero de comienzo palabra
-            if (tope=3){
-                printf("El comando ingresado excede el limite de parametros ingresados");
+            //Guardo indice de comienzo palabra
+            if (arreP.tope=4){
+                printf("El comando ingresado excede el limite de parametros ingresados"); //se debe modificar por la funcion con codigo de error
                 lleno = TRUE;
                 resetearArregloP (arreP);
             }
@@ -22,8 +22,8 @@ void cargarArregloP (ArregloPalabras &arreP, stringD s){
         else {
             if ((texto[i]!=' ') && ((texto[i+1]==' ') || (texto[i+1]=='\0'))){
                 f=i;
-                strcopPalabra(arreP[tope], s, k, f);
-                tope++;
+                strcopPalabra(arreP[arreP.tope], s, k, f);
+                arreP.tope++;
             }
         }
         i++;

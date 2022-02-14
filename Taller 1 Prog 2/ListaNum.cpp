@@ -21,32 +21,27 @@ void mostrarLista (ListaNum l){
 }
 
 int sumarValores (ListaNum l){
-
+    int suma = 0;
+    while (l != NULL)
+    {
+        suma = suma + l -> info;
+        l = l -> sig;
+    }
+    return suma;
 }
 
-void insFrontLista(ListaNum &l, int num){
-    ListaNum aux;
-    aux=new nodoLista;
-    aux->info=num;
-    aux->sig=l;
-    l=aux;
-}
 
 void insertarAtras (ListaNum &l, int num){
-    ListaNum aux=l;
-    ListaNum aux2;
-    if(ListaVacia(l))
-        insFrontLista(l,num);
-    else{
-        while(aux->sig!=NULL){
-            aux=aux->sig;
-        }
-        aux2=new nodoLista;
-        aux2->info=num;
-        aux2->sig=NULL;
-        aux->sig=aux2;
+    if (l==NULL)
+    {
+        l=new nodoLista;
+        l->info=num;
+        l->sig=NULL;
     }
+    else
+        insertarAtras(l->sig,num);
 }
+
 
 void bajarLisArchivo (ListaNum l, stringD arch){
     FILE * f = fopen (arch, "wb");
