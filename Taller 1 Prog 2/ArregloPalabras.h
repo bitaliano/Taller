@@ -12,16 +12,16 @@ typedef struct{
 void resetearArregloP (ArregloPalabras &arreP);
 //destruye los strings y setea el tope a 0
 
-void cargarArregloP (ArregloPalabras &arreP, stringD s);
-/*dado un arreglo y un string, carga las diferentes palabras del string en cada posición del arreglo, hasta un máximo de 4 palabras*/
+void cargarArregloP (ArregloPalabras &arreP, stringD texto);
+/*dado un arreglo y un string, carga las diferentes palabras del string en cada posiciï¿½n del arreglo, hasta un mï¿½ximo de 4 palabras*/
 
-void n_esimoPalabra (ArregloPalabras arre, int num, stringD &s);
-//devuelve el string cargado en la posición num del arreglo
+void n_esimoPalabra (ArregloPalabras arreP, int num, stringD &s);
+//devuelve el string cargado en la posiciï¿½n num del arreglo
 
-int devolverTope (ArregloPalabras arre);
+int devolverTope (ArregloPalabras arreP);
 //devuelve el valor del tope del arreglo
 
-boolean esVacioArreP (ArregloPalabras arre)
+boolean esVacioArreP (ArregloPalabras arreP)
 //devuelve TRUE si el tope = 0
 
 #endif // ARREGLOPALABRAS_H_INCLUDED

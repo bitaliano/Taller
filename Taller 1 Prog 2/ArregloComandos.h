@@ -6,14 +6,14 @@
 const int N = 9;
 typedef Comando ArregloComandos [N];
 
-void levantarComandos (ArregloComandos arreC, FILE *f);
-//recibe el archivo abierto y levanta el arreglo de comandos
+void levantarComandos (ArregloComandos &arreC, stringD fileName);
+//abre el archivo y carga el arreglo con los comandos levantados del archivo
 
 void n_esimoComando (ArregloComandos arre, int num, stringD &s);
-//devuelve el string cargado en la posición num del arreglo
+//devuelve el string cargado en la posiciï¿½n num del arreglo
 
 boolean existeComando (ArregloComandos arre, stringD s);
-//devuelve TRUE si el string pasado por parámetro es un comando existente en el arreglo
+//devuelve TRUE si el string pasado por parï¿½metro es un comando existente en el arreglo
 
 void destruirComandos (ArregloComandos arre);
 //recorre el arreglo y destruye los strings

@@ -1,27 +1,28 @@
 #include "Secuencia.h"
 
-void devuelveIdent (Secuencia sec, stringD &s);
-/*dada una secuencia devuelve el identificador*/
+void devuelveIdent (Secuencia sec, stringD &s)
+
 {
-	return Secuencia.id;
+	strcop(s, sec.id);
 }
 
-ListaNum devuelveLista(Secuencia sec);
-/*dada una secuencia devuelve la lista de números*/
+ListaNum devuelveLista(Secuencia sec)
+
 {
-	return Secuencia.numeros;
+	return sec.numeros;
 }
 
-Secuencia cargarSecuencia (ListaNum l, stringD ident);
-/*carga los valores identificador y númerosen la secuencia*/
+Secuencia cargarSecuencia (ListaNum l, stringD ident)
+
 {
-	Secuencia.id = ident;
-	Secuencia.numeros = l;
-	return Secuencia;
+	Secuencia sec;
+	sec.id = ident;
+	sec.numeros = l;
+	return sec;
 }
 
-void mostrarSecuencia (Secuencia sec);
-//despliega en pantalla los parámetros de sec
+void mostrarSecuencia (Secuencia sec)
+
 {
 printf ("\nNombre: ");
 	print(sec.id);
