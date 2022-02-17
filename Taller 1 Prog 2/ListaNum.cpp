@@ -1,26 +1,31 @@
 #include "ListaNum.h"
 
-void crearLista (ListaNum &l){
+void crearLista (ListaNum &l)
+{
     l=NULL;
 }
 
-boolean ListaVacia(ListaNum l){
+boolean ListaVacia(ListaNum l)
+{
     if (l==NULL)
         return TRUE;
     else
         return FALSE;
 }
 
-void mostrarLista (ListaNum l){
+void mostrarLista (ListaNum l)
+{
     printf("[ ");
-    while(l!=NULL){
+    while(l!=NULL)
+    {
         printf("%d ", info);
         l=l->sig;
     }
     printf("]");
 }
 
-int sumarValores (ListaNum l){
+int sumarValores (ListaNum l)
+{
     int suma = 0;
     while (l != NULL)
     {
@@ -31,7 +36,8 @@ int sumarValores (ListaNum l){
 }
 
 
-void insertarAtras (ListaNum &l, int num){
+void insertarAtras (ListaNum &l, int num)
+{
     if (l==NULL)
     {
         l=new nodoLista;
@@ -43,7 +49,8 @@ void insertarAtras (ListaNum &l, int num){
 }
 
 
-void bajarLisArchivo (ListaNum l, stringD arch){
+void bajarLisArchivo (ListaNum l, stringD arch)
+{
     FILE * f = fopen (arch, "wb");
     while (l != NULL)
     {
@@ -53,7 +60,8 @@ void bajarLisArchivo (ListaNum l, stringD arch){
     fclose (f);
 }
 
-void levantarLisArchivo (ListaNum l, stringD arch){
+void levantarLisArchivo (ListaNum l, stringD arch)
+{
     FILE * f = fopen (arch, "rb");
     int buffer;
     crearLista (L);
@@ -66,14 +74,32 @@ void levantarLisArchivo (ListaNum l, stringD arch){
     fclose (f);
 }
 
-void destruirLista (ListaNum &l){
-
+void destruirLista (ListaNum &l)
+{
+    if (l != NULL)
+    {
+        ListaNum aux = l;
+        l = l -> sig;
+        delete aux;
+        destruirLista (l);
+    }
 }
 
-void copiarLista (ListaNum listOrigen; ListaNum &listCopia){
 
+void copiarLista (ListaNum lOrigen, ListaNum &lCopia)
+{
+    while (lOrigen != NULL)
+    {
+        insertarAtras(lCopia,lOrigen->info);
+        lOrigen = lOrigen->sig;
+    }
 }
 
-void invertirLista (ListaNum listOrigen; ListaNum &listInvert){
-
+void invertirLista (ListaNum listOrigen, ListaNum &listInvert)
+{
+    if (listOrigen != NULL)
+    {
+        invertirLista(listOrigen->sig, listInvert);
+        insertarAtras(listInvert,listOrigen->info);
+    }
 }

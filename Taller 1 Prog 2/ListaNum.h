@@ -35,8 +35,8 @@ void levantarLisArchivo (ListaNum l, stringD arch);
 void destruirLista (ListaNum &l);
 /* liberala memoria ocupada por la lista y deja el puntero nulo*/
 
-void copiarLista (ListaNum listOrigen, ListaNum &listCopia);
-//copia una lista origen a una lista copia
+void copiarLista (ListaNum lOrigen, ListaNum &lCopia);
+//copia una lista origen al final de otra lista
 
 void invertirLista (ListaNum listOrigen, ListaNum &listInvert);
 //invierte los valores de una lista origen en una lista invertida
