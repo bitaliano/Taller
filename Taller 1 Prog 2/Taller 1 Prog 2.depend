@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1644810772 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\abbsecuencias.cpp
+1645141241 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\abbsecuencias.cpp
 	"ABBSecuencias.h"
 
-1644811279 c:\users\nlaur\documents\github\taller\taller 1 prog 2\abbsecuencias.h
+1645140300 c:\users\nlaur\documents\github\taller\taller 1 prog 2\abbsecuencias.h
 	"Secuencia.h"
 
-1644811214 c:\users\nlaur\documents\github\taller\taller 1 prog 2\secuencia.h
+1645140994 c:\users\nlaur\documents\github\taller\taller 1 prog 2\secuencia.h
 	"ListaNum.h"
 	"stringD.h"
 
@@ -16,10 +16,10 @@
 1644711592 c:\users\nlaur\documents\github\taller\taller 1 prog 2\boolean.h
 	<stdio.h>
 
-1644812148 c:\users\nlaur\documents\github\taller\taller 1 prog 2\stringd.h
+1645138475 c:\users\nlaur\documents\github\taller\taller 1 prog 2\stringd.h
 	"boolean.h"
 
-1645060132 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\arreglocomandos.cpp
+1645140994 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\arreglocomandos.cpp
 	"ArregloComandos.h"
 
 1645060132 c:\users\nlaur\documents\github\taller\taller 1 prog 2\arreglocomandos.h
@@ -33,4 +33,16 @@
 
 1637073512 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\boolean.h
 	<stdio.h>
+
+1645060132 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\arreglopalabras.cpp
+	"ArregloPalabras.h"
+
+1645141309 c:\users\nlaur\documents\github\taller\taller 1 prog 2\arreglopalabras.h
+	"stringD.h"
+
+1644711592 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\boolean.cpp
+	"boolean.h"
+
+1645060132 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\comando.cpp
+	"Comando.h"
 

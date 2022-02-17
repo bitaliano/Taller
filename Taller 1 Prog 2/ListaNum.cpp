@@ -18,7 +18,7 @@ void mostrarLista (ListaNum l)
     printf("[ ");
     while(l!=NULL)
     {
-        printf("%d ", info);
+        printf("%d ", l->info);
         l=l->sig;
     }
     printf("]");
@@ -54,7 +54,7 @@ void bajarLisArchivo (ListaNum l, stringD arch)
     FILE * f = fopen (arch, "wb");
     while (l != NULL)
     {
-        fwrite (l->info, sizeof(int), 1, f);
+        fwrite (&l->info, sizeof(int), 1, f);
         l = l->sig;
     }
     fclose (f);
@@ -64,12 +64,12 @@ void levantarLisArchivo (ListaNum l, stringD arch)
 {
     FILE * f = fopen (arch, "rb");
     int buffer;
-    crearLista (L);
-    fread(buffer, sizeof(int), 1, f);
+    crearLista (l);
+    fread(&buffer, sizeof(int), 1, f);
     while (!feof(f))
     {
         insertarAtras (l, buffer);
-        fread(buffer, sizeof(int), 1, f);
+        fread(&buffer, sizeof(int), 1, f);
     }
     fclose (f);
 }

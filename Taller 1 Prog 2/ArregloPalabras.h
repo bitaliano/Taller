@@ -21,7 +21,7 @@ void n_esimoPalabra (ArregloPalabras arreP, int num, stringD &s);
 int devolverTope (ArregloPalabras arreP);
 //devuelve el valor del tope del arreglo
 
-boolean esVacioArreP (ArregloPalabras arreP)
+boolean esVacioArreP (ArregloPalabras arreP);
 //devuelve TRUE si el tope = 0
 
 #endif // ARREGLOPALABRAS_H_INCLUDED

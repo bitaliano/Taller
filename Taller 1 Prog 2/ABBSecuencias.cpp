@@ -15,17 +15,16 @@ Secuencia DarRaiz (ABBSecuencias a)
     return a -> info;
 }
 
-Secuencia devuelveSec (ABBSecuencias a, stringD ident, stringD &s)
+Secuencia devuelveSec (ABBSecuencias a, stringD ident)
 {
-    devuelveIdent(a->info, s);
-    if (streq(s, ident))
+    if (streq(devuelveIdent(a->info), ident))
         return a->info;
     else
     {
-        if (strMayor(s, ident))
-            return devuelveSec (a->hizq, ident,s);
+        if (strMayor(devuelveIdent(a->info), ident))
+            return devuelveSec (a->hizq, ident);
         else
-            return devuelveSec (a->hder, ident,s);
+            return devuelveSec (a->hder, ident);
     }
 }
 
@@ -40,7 +39,7 @@ ABBSecuencias HijoDer (ABBSecuencias a)
     return a -> hder;
 }
 
-void insertarSecuencia (ABBSecuencias &a, Secuencia sec, stringD &s)
+void insertarSecuencia (ABBSecuencias &a, Secuencia sec)
 {
     if (a == NULL)
     {
@@ -51,11 +50,8 @@ void insertarSecuencia (ABBSecuencias &a, Secuencia sec, stringD &s)
     }
     else
     {
-        stringD t;
-        strcrear(t);
-        devuelveIdent(a->info, s);
-        devuelveIdent(sec, t);
-        if (strMayor(s, t))
+
+        if (strMayor(devuelveIdent(a->info), devuelveIdent(sec)))
             insertarSecuencia(a->hizq , sec);
         else
             insertarSecuencia(a->hder, sec);
@@ -66,11 +62,11 @@ boolean Pertenece (ABBSecuencias a, stringD ident)
 {
     if (a==NULL)
         return FALSE;
-    else if streq(devuelveIdent(a->info), ident)
+    else if (streq(devuelveIdent(a->info), ident))
         return TRUE;
     else
     {
-        if strMayor(devuelveIdent(a->info), ident);
+        if (strMayor(devuelveIdent(a->info), ident))
             return Pertenece(a->hizq, ident);
         else
             return Pertenece(a->hder, ident);
