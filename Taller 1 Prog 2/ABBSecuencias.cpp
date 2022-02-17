@@ -15,24 +15,20 @@ Secuencia DarRaiz (ABBSecuencias a)
     return a -> info;
 }
 
-Secuencia devuelveSec (ABBSecuencias a, stringD ident)
+Secuencia devuelveSec (ABBSecuencias a, stringD ident, stringD &s)
 {
-    if (streq(devuelveIdent(a->info, s), ident))
+    devuelveIdent(a->info, s);
+    if (streq(s, ident))
         return a->info;
     else
-        if (strMayor(devuelveIdent(a->info, s), ident))
-            return devuelveSec (a->hizq, ident);
+    {
+        if (strMayor(s, ident))
+            return devuelveSec (a->hizq, ident,s);
         else
-            return devuelveSec (a->hder, ident);
-}
-   /* {
-        if (strMayor(devuelveIdent(a->info, s), ident))
-            devuelveSec (a->hizq, ident);
-        else
-            devuelveSec (a->hder, ident);
+            return devuelveSec (a->hder, ident,s);
     }
+}
 
-}*/
 
 ABBSecuencias HijoIzq (ABBSecuencias a)
 {
@@ -44,7 +40,7 @@ ABBSecuencias HijoDer (ABBSecuencias a)
     return a -> hder;
 }
 
-void insertarSecuencia (ABBSecuencias &a, Secuencia sec)
+void insertarSecuencia (ABBSecuencias &a, Secuencia sec, stringD &s)
 {
     if (a == NULL)
     {
@@ -55,7 +51,11 @@ void insertarSecuencia (ABBSecuencias &a, Secuencia sec)
     }
     else
     {
-        if (strMayor(devuelveIdent(a->info, s), devuelveIdent(sec, t)))
+        stringD t;
+        strcrear(t);
+        devuelveIdent(a->info, s);
+        devuelveIdent(sec, t);
+        if (strMayor(s, t))
             insertarSecuencia(a->hizq , sec);
         else
             insertarSecuencia(a->hder, sec);
@@ -66,12 +66,11 @@ boolean Pertenece (ABBSecuencias a, stringD ident)
 {
     if (a==NULL)
         return FALSE;
-    else
-        if streq(devuelveIdent(a->info, ident))
-            return TRUE;
+    else if streq(devuelveIdent(a->info), ident)
+        return TRUE;
     else
     {
-        if strMayor(devuelveIdent(a->info, ident);
+        if strMayor(devuelveIdent(a->info), ident);
             return Pertenece(a->hizq, ident);
         else
             return Pertenece(a->hder, ident);
