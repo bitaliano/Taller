@@ -130,7 +130,18 @@ boolean strmen (stringD s1,stringD s2)
     return menor;
 }
 
-
+boolean strMayor (stringD s1,stringD s2)
+{
+    boolean mayor = FALSE;
+    int i=0;
+    while (s1[i] == s2[i])
+    {
+        if(s1[i] > s2[i])
+            mayor = TRUE;
+        i++;
+    }
+    return mayor;
+}
 
 boolean streq (stringD s1,stringD s2)
 {

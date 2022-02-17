@@ -4,13 +4,13 @@
 #include "ListaNum.h"
 #include "stringD.h"
 
-typedef struct{
-                stringD id;
+typedef struct{ stringD id;
                 ListaNum numeros;
                 } Secuencia;
 
 
 void devuelveIdent (Secuencia sec, stringD &s);
+
 /*dada una secuencia devuelve el identificador*/
 
 ListaNum devuelveLista(Secuencia sec);
