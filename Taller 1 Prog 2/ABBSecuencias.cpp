@@ -21,10 +21,18 @@ Secuencia devuelveSec (ABBSecuencias a, stringD ident)
         return a->info;
     else
         if (strMayor(devuelveIdent(a->info, s), ident))
-            devuelveSec (a->hder, ident);
+            return devuelveSec (a->hizq, ident);
         else
-            devuelveSec (a->hizq, ident);
+            return devuelveSec (a->hder, ident);
 }
+   /* {
+        if (strMayor(devuelveIdent(a->info, s), ident))
+            devuelveSec (a->hizq, ident);
+        else
+            devuelveSec (a->hder, ident);
+    }
+
+}*/
 
 ABBSecuencias HijoIzq (ABBSecuencias a)
 {
@@ -48,29 +56,28 @@ void insertarSecuencia (ABBSecuencias &a, Secuencia sec)
     else
     {
         if (strMayor(devuelveIdent(a->info, s), devuelveIdent(sec, t)))
-            insertarSecuencia(a->hder, sec);
+            insertarSecuencia(a->hizq , sec);
         else
-            insertarSecuencia(a->hizq, sec);
+            insertarSecuencia(a->hder, sec);
     }
 }
 
 boolean Pertenece (ABBSecuencias a, stringD ident)
 {
-    if (a == NULL)
+    if (a==NULL)
         return FALSE;
     else
-    {
-        if(streq((devuelveIdent(a->info, s),ident)))
+        if streq(devuelveIdent(a->info, ident))
             return TRUE;
+    else
+    {
+        if strMayor(devuelveIdent(a->info, ident);
+            return Pertenece(a->hizq, ident);
         else
-        {
-            if (strMayor(devuelveIdent(a->info, s), ident))
-                return Pertenece(a->hder, ident);
-            else
-                return Pertenece (a->hizq, ident);
-        }
+            return Pertenece(a->hder, ident);
     }
 }
+
 
 
 

@@ -134,12 +134,13 @@ boolean strMayor (stringD s1,stringD s2)
 {
     boolean mayor = FALSE;
     int i=0;
-    while (s1[i] == s2[i])
+    do
     {
         if(s1[i] > s2[i])
             mayor = TRUE;
         i++;
     }
+    while (s1[i] == s2[i]);
     return mayor;
 }
 
