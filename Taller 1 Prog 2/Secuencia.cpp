@@ -1,9 +1,9 @@
 #include "Secuencia.h"
 
-void devuelveIdent (Secuencia sec, stringD &s)
+stringD devuelveIdent (Secuencia sec)
 
 {
-	strcop(s, sec.id);
+	return sec.id;
 }
 
 ListaNum devuelveLista(Secuencia sec)

@@ -31,6 +31,7 @@ boolean existeComando (ArregloComandos arre, stringD s)
     boolean existe = FALSE;
     int i = 0;
     stringD nombre;
+    strcrear(nombre);
     while (!existe && i < 9)
     {
         n_esimoComando(arre, i, nombre);
@@ -46,6 +47,7 @@ boolean existeComando (ArregloComandos arre, stringD s)
 void destruirComandos (ArregloComandos arre)
 {
     stringD s;
+    strcrear(s);
     for (int i = 0; i < 9; i++)
     {
         devuelveNomCom(arre[i],s);

@@ -9,18 +9,18 @@ typedef struct{ stringD id;
                 } Secuencia;
 
 
-void devuelveIdent (Secuencia sec, stringD &s);
+stringD devuelveIdent (Secuencia sec);
 
 /*dada una secuencia devuelve el identificador*/
 
 ListaNum devuelveLista(Secuencia sec);
-/*dada una secuencia devuelve la lista de números*/
+/*dada una secuencia devuelve la lista de nï¿½meros*/
 
 Secuencia cargarSecuencia (ListaNum l, stringD ident);
-/*carga los valores identificador y númerosen la secuencia*/
+/*carga los valores identificador y nï¿½merosen la secuencia*/
 
 void mostrarSecuencia (Secuencia sec);
-//despliega en pantalla los parámetros de sec
+//despliega en pantalla los parï¿½metros de sec
 
 
 
