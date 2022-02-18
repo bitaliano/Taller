@@ -97,7 +97,8 @@ return a;
 void destruirABB (ABBSecuencias &a)
 {
 
-if(a!=NULL){
+if(a!=NULL)
+{
     destruirABB(a->hizq);
     destruirABB(a->hder);
     ListaNum l = devuelveLista(a->info);
@@ -107,7 +108,7 @@ if(a!=NULL){
     delete(a);
     a=NULL ;
 }
-}
+
 
 
 
