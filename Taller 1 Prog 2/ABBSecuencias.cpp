@@ -73,6 +73,29 @@ boolean Pertenece (ABBSecuencias a, stringD ident)
     }
 }
 
+void mostrarEnOrden (ABBSecuencias a)
+{
+
+    if (a->hizq != NULL)
+        mostrarEnOrden(a->hizq);
+
+    print(devuelveIdent(a->info));
+
+    if (a->hder != NULL)
+        mostrarEnOrden(a->hder);
+}
+
+ABBSecuencias constructABB (Secuencia raiz, ABBSecuencias i, ABBSecuencias  d)
+{
+ABBSecuencias a = new nodoSecuencia;
+a -> info = raiz;
+a -> hizq = i;
+a -> hder = d;
+return a;
+}
+
+void destruirABB (ABBSecuencias &a);
+// libera la memoria ocupada por el �rbol y lo deja nulo
 
 
 
