@@ -1,7 +1,5 @@
 #include "ArregloPalabras.h"
 
-
-
 void cargarArregloP (ArregloPalabras &arreP, stringD texto)
 {
     int k=0,f=0,i=0;
@@ -22,8 +20,9 @@ void cargarArregloP (ArregloPalabras &arreP, stringD texto)
             {
                 printf("El comando ingresado excede el limite de parametros permitidos"); //se debe modificar por la funcion con codigo de error
                 lleno = TRUE;
-                resetearArregloP (arreP);
+                //resetearArregloP (arreP);
             }
+            fflush(stdin);
             k=i+1;
         }
         else
@@ -31,6 +30,7 @@ void cargarArregloP (ArregloPalabras &arreP, stringD texto)
             if ((texto[i]!=' ') && ((texto[i+1]==' ') || (texto[i+1]=='\0')))
             {
                 //Guardo indice de final de palabra
+                fflush(stdin);
                 f=i;
                 strcopPalabra(arreP.arre[arreP.tope], texto, k, f);
                 arreP.tope++;
@@ -46,6 +46,7 @@ void mostrarArregloP (ArregloPalabras arreP)
     for (i=0; i<arreP.tope; i++)
     {
         print(arreP.arre[i]);
+        printf("\nEl largo es: %d", strlar(arreP.arre[i]));
         printf("\n");
     }
 }
@@ -63,7 +64,6 @@ void n_esimoPalabra (ArregloPalabras arreP, int num, stringD &s)
 {
     strcop(s, arreP.arre[num]);
 }
-
 
 int devolverTope (ArregloPalabras arreP)
 {

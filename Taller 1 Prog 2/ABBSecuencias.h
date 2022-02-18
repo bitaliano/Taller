@@ -21,7 +21,7 @@ boolean esVacioABB (ABBSecuencias a);
 Secuencia DarRaiz (ABBSecuencias a); ///Pre condicion: ABB no vacio
 //devuelve el estructurado del nodo raiz del �rbol pasado como par�metro
 
-Secuencia devuelveSec (ABBSecuencias a, stringD ident, stringD &s); /// Pre condicion: existeSecuencia ident en el �rbol a
+Secuencia devuelveSec (ABBSecuencias a, stringD ident); /// Pre condicion: existeSecuencia ident en el �rbol a
 //dado un identificador devuelve la secuencia correspondiente cargado en el �rbol
 
 ABBSecuencias HijoIzq (ABBSecuencias a); ///Pre condicion: ABB no vacio

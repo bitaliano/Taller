@@ -15,7 +15,7 @@ stringD devuelveIdent (Secuencia sec);
 ListaNum devuelveLista(Secuencia sec);
 //dada una secuencia devuelve la lista de n�meros
 
-Secuencia cargarSecuencia (ListaNum l, stringD ident);
+void cargarSecuencia (Secuencia &sec, stringD nomSec);
 //carga los valores identificador y n�merosen la secuencia
 
 void mostrarSecuencia (Secuencia sec);

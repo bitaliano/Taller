@@ -12,13 +12,12 @@ ListaNum devuelveLista(Secuencia sec)
 	return sec.numeros;
 }
 
-Secuencia cargarSecuencia (ListaNum l, stringD ident)
+void cargarSecuencia (Secuencia &sec, stringD nomSec)
 
 {
-	Secuencia sec;
-	sec.id = ident;
-	sec.numeros = l;
-	return sec;
+	crearLista (sec.numeros);
+	strcrear (sec.id);
+	sec.id = nomSec;
 }
 
 void mostrarSecuencia (Secuencia sec)

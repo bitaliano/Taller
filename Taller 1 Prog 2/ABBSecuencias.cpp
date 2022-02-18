@@ -50,7 +50,6 @@ void insertarSecuencia (ABBSecuencias &a, Secuencia sec)
     }
     else
     {
-
         if (strmen(devuelveIdent(a->info), devuelveIdent(sec)))
             insertarSecuencia(a->hizq , sec);
         else
