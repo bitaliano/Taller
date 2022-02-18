@@ -13,7 +13,7 @@ void cargarArregloP (ArregloPalabras &arreP, stringD texto)
         //Guardo indice de comienzo palabra
         k=i;
     }
-    while (texto[i]!='\0' && !lleno )
+    while (texto[i]!='\0' && !lleno)
     {
         if ((texto[i]==' ') && (texto[i+1]!=' ') && (texto[i+1]!='\0'))
         {
@@ -24,7 +24,7 @@ void cargarArregloP (ArregloPalabras &arreP, stringD texto)
                 lleno = TRUE;
                 resetearArregloP (arreP);
             }
-		k=i+1;
+            k=i+1;
         }
         else
         {
@@ -37,6 +37,16 @@ void cargarArregloP (ArregloPalabras &arreP, stringD texto)
             }
         }
         i++;
+    }
+}
+
+void mostrarArregloP (ArregloPalabras arreP)
+{
+    int i;
+    for (i=0; i<arreP.tope; i++)
+    {
+        print(arreP.arre[i]);
+        printf("\n");
     }
 }
 

@@ -46,7 +46,7 @@
 1645060132 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\comando.cpp
 	"Comando.h"
 
-1645142339 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\abbsecuencias.cpp
+1645203323 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\abbsecuencias.cpp
 	"ABBSecuencias.h"
 
 1645142836 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\abbsecuencias.h
@@ -78,8 +78,10 @@
 1645141897 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\listanum.cpp
 	"ListaNum.h"
 
-1644712057 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\main.cpp
+1645205400 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\main.cpp
 	<stdio.h>
+	"ABBSecuencias.h"
+	"Validaciones.h"
 
 1645141897 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\secuencia.cpp
 	"Secuencia.h"
@@ -95,9 +97,9 @@
 	"ArregloComandos.h"
 	"ABBSecuencias.h"
 
-1645142758 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\arreglopalabras.h
+1645203255 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\arreglopalabras.h
 	"stringD.h"
 
-1645142803 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\arreglopalabras.cpp
+1645205701 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\arreglopalabras.cpp
 	"ArregloPalabras.h"
 

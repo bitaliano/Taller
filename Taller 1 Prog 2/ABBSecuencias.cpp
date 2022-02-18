@@ -87,27 +87,30 @@ void mostrarEnOrden (ABBSecuencias a)
 
 ABBSecuencias constructABB (Secuencia raiz, ABBSecuencias i, ABBSecuencias  d)
 {
-ABBSecuencias a = new nodoSecuencia;
-a -> info = raiz;
-a -> hizq = i;
-a -> hder = d;
-return a;
+    ABBSecuencias a = new nodoSecuencia;
+    a -> info = raiz;
+    a -> hizq = i;
+    a -> hder = d;
+    return a;
 }
 
 void destruirABB (ABBSecuencias &a)
 {
-
-if(a!=NULL)
-{
-    destruirABB(a->hizq);
-    destruirABB(a->hder);
-    ListaNum l = devuelveLista(a->info);
-    destruirLista(l);
-    stringD s = devuelveIdent(a->info);
-    strdestruir(s);
-    delete(a);
-    a=NULL ;
+    if(a!=NULL)
+    {
+        destruirABB(a->hizq);
+        destruirABB(a->hder);
+        ListaNum l = devuelveLista(a->info);
+        destruirLista(l);
+        stringD s = devuelveIdent(a->info);
+        strdestruir(s);
+        delete(a);
+        a=NULL ;
+    }
 }
+
+
+
 
 
 
