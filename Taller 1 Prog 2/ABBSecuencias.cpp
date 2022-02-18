@@ -21,7 +21,7 @@ Secuencia devuelveSec (ABBSecuencias a, stringD ident)
         return a->info;
     else
     {
-        if (strMayor(devuelveIdent(a->info), ident))
+        if (strmen(devuelveIdent(a->info), ident))
             return devuelveSec (a->hizq, ident);
         else
             return devuelveSec (a->hder, ident);
@@ -51,7 +51,7 @@ void insertarSecuencia (ABBSecuencias &a, Secuencia sec)
     else
     {
 
-        if (strMayor(devuelveIdent(a->info), devuelveIdent(sec)))
+        if (strmen(devuelveIdent(a->info), devuelveIdent(sec)))
             insertarSecuencia(a->hizq , sec);
         else
             insertarSecuencia(a->hder, sec);
@@ -66,7 +66,7 @@ boolean Pertenece (ABBSecuencias a, stringD ident)
         return TRUE;
     else
     {
-        if (strMayor(devuelveIdent(a->info), ident))
+        if (strmen(devuelveIdent(a->info), ident))
             return Pertenece(a->hizq, ident);
         else
             return Pertenece(a->hder, ident);

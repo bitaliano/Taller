@@ -41,8 +41,6 @@ void print (stringD s);
 //strmen  recibe dos strings y devuelve TRUE si el primero de ellos es menor (en orden alfabético) que el segundo, o FALSE en caso contrario.
 boolean strmen (stringD s1,stringD s2);
 
-boolean strMayor (stringD s1,stringD s2);
-
 
 //streq 	reciba dos strings y devuelve TRUE si ambos strings son iguales o FALSE en caso contrario.
 boolean streq (stringD s1,stringD s2);
