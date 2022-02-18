@@ -1,24 +1,21 @@
 #include "ArregloComandos.h"
 
-
-
-
 void levantarComandos (ArregloComandos &arreC, stringD fileName)
 
 {
     FILE * f = fopen (fileName, "rb");
     int i = 0;
     levantarComArchivo(arreC[i], f);
-    
+
     while (!feof(f) && i < 9)
     {
         i++;
         levantarComArchivo(arreC[i], f);
     }
     fclose (f);
-} 
+}
 
- 
+
 
 void n_esimoComando (ArregloComandos arre, int num, stringD &s)
 {

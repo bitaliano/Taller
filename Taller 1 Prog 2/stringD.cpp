@@ -1,8 +1,5 @@
 #include "stringD.h"
 
-
-
-
 void strcrear (stringD &s)
 {
     s=new char[1];

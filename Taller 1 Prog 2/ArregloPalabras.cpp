@@ -1,7 +1,5 @@
 #include "ArregloPalabras.h"
 
-
-
 void cargarArregloP (ArregloPalabras &arreP, stringD texto)
 {
     int k=0,f=0,i=0;

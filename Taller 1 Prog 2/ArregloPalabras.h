@@ -13,7 +13,7 @@ void resetearArregloP (ArregloPalabras &arreP);
 //destruye los strings y setea el tope a 0
 
 void cargarArregloP (ArregloPalabras &arreP, stringD texto);
-/*dado un arreglo y un string, carga las diferentes palabras del string en cada posici�n del arreglo, hasta un m�ximo de 4 palabras*/
+//dado un arreglo y un string, carga las diferentes palabras del string en cada posici�n del arreglo, hasta un m�ximo de 4 palabras
 
 void n_esimoPalabra (ArregloPalabras arreP, int num, stringD &s);
 //devuelve el string cargado en la posici�n num del arreglo
