@@ -16,40 +16,37 @@ void CrearArbol (ABBSecuencias &a);
 // Crea arbol vacio
 
 boolean esVacioABB (ABBSecuencias a);
-//devuelve TRUE si el árbol está vacío
+//devuelve TRUE si el ï¿½rbol estï¿½ vacï¿½o
 
 Secuencia DarRaiz (ABBSecuencias a); ///Pre condicion: ABB no vacio
-//devuelve el estructurado del nodo raiz del árbol pasado como parámetro
+//devuelve el estructurado del nodo raiz del ï¿½rbol pasado como parï¿½metro
 
-Secuencia devuelveSec (ABBSecuencias a, stringD ident, stringD &s); /// Pre condicion: existeSecuencia ident en el árbol a
-//dado un identificador devuelve la secuencia correspondiente cargado en el árbol
+Secuencia devuelveSec (ABBSecuencias a, stringD ident, stringD &s); /// Pre condicion: existeSecuencia ident en el ï¿½rbol a
+//dado un identificador devuelve la secuencia correspondiente cargado en el ï¿½rbol
 
 ABBSecuencias HijoIzq (ABBSecuencias a); ///Pre condicion: ABB no vacio
-//devuelve el hijo izq delárbol pasado como parámetro
+//devuelve el hijo izq delï¿½rbol pasado como parï¿½metro
 
 ABBSecuencias HijoDer (ABBSecuencias a); ///Pre condicion: ABB no vacio
-//devuelve el hijo der del árbol pasado como parámetro
+//devuelve el hijo der del ï¿½rbol pasado como parï¿½metro
 
 void insertarSecuencia (ABBSecuencias &a, Secuencia sec); /// Pre condicion: La secuencia no existe en el arbol
-//inserta una secuencia en el árbol ordenada alfabéticamente según su identificador
+//inserta una secuencia en el ï¿½rbol ordenada alfabï¿½ticamente segï¿½n su identificador
 
 boolean Pertenece (ABBSecuencias a, stringD ident);
 //Devueluve TRUE si una secuencia pertenece al arbol
 
 void mostrarEnOrden (ABBSecuencias a); ///Pre condicion: ABB no vacio
-//recorre el árbol de la forma: izq-raíz-der y muestra en pantalla las secuencias en ese orden
+//recorre el ï¿½rbol de la forma: izq-raï¿½z-der y muestra en pantalla las secuencias en ese orden
 
 ABBSecuencias constructABB (Secuencia raiz, ABBSecuencias i, ABBSecuencias  d);
 //dada una secuencia raiz, construye el ABB.
 
-void Bajar_ABB (ABBSecuencias a, stringD nomArch);
-// Abre el archivo para escritura y escribe los datos de todos los productos que están almacenados en el árbol
-
 void destruirABB (ABBSecuencias &a);
-// libera la memoria ocupada por el árbol y lo deja nulo
+// libera la memoria ocupada por el ï¿½rbol y lo deja nulo
 
 
-//PRECONDICIÓN:
+//PRECONDICIï¿½N:
 
 
 
