@@ -100,8 +100,10 @@ void destruirABB (ABBSecuencias &a)
 if(a!=NULL){
     destruirABB(a->hizq);
     destruirABB(a->hder);
-    destruirLista(devuelveLista(a->info));
-    strdestruir(devuelveIdent(a->info));
+    ListaNum l = devuelveLista(a->info);
+    destruirLista(l);
+    stringD s = devuelveIdent(a->info);
+    strdestruir(s);
     delete(a);
     a=NULL ;
 }
