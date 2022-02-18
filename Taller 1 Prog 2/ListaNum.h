@@ -8,7 +8,7 @@ typedef struct nodoL{
                 int info;
                 nodoL *sig;
                 }nodoLista;
-typedef nodoLista *ListaNum;
+typedef nodoLista * ListaNum;
 
 
 void crearLista (ListaNum &l);

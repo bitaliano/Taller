@@ -97,15 +97,17 @@ return a;
 void destruirABB (ABBSecuencias &a)
 {
 
-if(a!=NULL){
+if(a!=NULL)
+{
     destruirABB(a->hizq);
     destruirABB(a->hder);
+}
     destruirLista(devuelveLista(a->info));
     strdestruir(devuelveIdent(a->info));
     delete(a);
     a=NULL ;
 }
-}
+
 
 
 
