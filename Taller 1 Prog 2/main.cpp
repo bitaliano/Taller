@@ -48,7 +48,7 @@ int main()
                 scan(texto1);
                 cargarSecuencia(sec, texto1);
                 fflush(stdin);
-                insertarSecuencia(arbol, sec); //Borra nodos y copia varias veces la secuencia
+                insertarSecuencia(arbol, sec); //Copia la secuencia encima de las demas
                 ///Prueba para ver como anda el streq y strmen con strings desde funciones
                 if (streq(devuelveIdent(arbol->info), devuelveIdent(sec)))
                     printf("\nIGUALES");

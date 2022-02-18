@@ -74,14 +74,12 @@ boolean Pertenece (ABBSecuencias a, stringD ident)
 
 void mostrarEnOrden (ABBSecuencias a)
 {
-
-    if (a->hizq != NULL)
-        mostrarEnOrden(a->hizq);
-
-    print(devuelveIdent(a->info));
-
-    if (a->hder != NULL)
+    if (a != NULL)
+    {
+        mostrarEnOrden(a ->hizq);
+        mostrarSecuencia(a->info);
         mostrarEnOrden(a->hder);
+    }
 }
 
 ABBSecuencias constructABB (Secuencia raiz, ABBSecuencias i, ABBSecuencias  d)
