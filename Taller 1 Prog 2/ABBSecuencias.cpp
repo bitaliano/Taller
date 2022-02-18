@@ -94,8 +94,18 @@ a -> hder = d;
 return a;
 }
 
-void destruirABB (ABBSecuencias &a);
-// libera la memoria ocupada por el �rbol y lo deja nulo
+void destruirABB (ABBSecuencias &a)
+{
+
+if(a!=NULL){
+    destruirABB(a->hizq);
+    destruirABB(a->hder);
+    destruirLista(devuelveLista(a->info));
+    strdestruir(devuelveIdent(a->info));
+    delete(a);
+    a=NULL ;
+}
+}
 
 
 
