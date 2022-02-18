@@ -5,7 +5,10 @@
 
 typedef enum {FALSE, TRUE} boolean;
 
-void cargar (boolean &b); // devuelve la variable cargada
-void mostrar (boolean b); // muestra en pantalla la varibale cargada
+void cargar (boolean &b);
+// devuelve la variable cargada
+
+void mostrar (boolean b);
+// muestra en pantalla la varibale cargada
 
 #endif // BOOLEAN_H_INCLUDED

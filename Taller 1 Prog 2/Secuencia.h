@@ -10,14 +10,13 @@ typedef struct{ stringD id;
 
 
 stringD devuelveIdent (Secuencia sec);
-
-/*dada una secuencia devuelve el identificador*/
+//dada una secuencia devuelve el identificador
 
 ListaNum devuelveLista(Secuencia sec);
-/*dada una secuencia devuelve la lista de n�meros*/
+//dada una secuencia devuelve la lista de n�meros
 
 Secuencia cargarSecuencia (ListaNum l, stringD ident);
-/*carga los valores identificador y n�merosen la secuencia*/
+//carga los valores identificador y n�merosen la secuencia
 
 void mostrarSecuencia (Secuencia sec);
 //despliega en pantalla los par�metros de sec
