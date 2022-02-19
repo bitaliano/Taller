@@ -38,7 +38,7 @@ int main()
                 fflush(stdin);
                 scan(texto1);
                 print(texto1);
-                cargarArregloP(arreP, texto1); // ANDA BARBARO PARA DOS, SE ROMPE PARA 3 O MAS
+                cargarArregloP(arreP, texto1); 
                 printf("\nEl tope era %d\n", devolverTope(arreP));
                 printf("El arreglo es:\n");
                 mostrarArregloP(arreP);
