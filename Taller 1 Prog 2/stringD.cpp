@@ -113,6 +113,22 @@ void print (stringD s)
 
 boolean strmen (stringD s1,stringD s2)
 {
+    int i=0;
+    boolean distintos = FALSE;
+    boolean menor = FALSE;
+    while ((s1[i] != '\0' && s2[i] != '\0') && !(distintos))
+    {
+        if(s1[i] != s2[i])
+            distintos = TRUE;
+        if(s1[i] < s2[i])
+            menor = TRUE;
+        i++;
+    }
+    if(!(distintos) && s2[i] != '\0')
+        menor = TRUE;
+    return menor;
+}
+/*{
     boolean menor=TRUE;
     int i=0;
     while((menor)&&(s1[i]!='\0')&&(s2[i]!='\0'))
@@ -125,7 +141,7 @@ boolean strmen (stringD s1,stringD s2)
     if (s2[i]=='\0')
         menor=FALSE;
     return menor;
-}
+}*/
 
 boolean streq (stringD s1,stringD s2)
 {

@@ -13,7 +13,7 @@ int main()
     Secuencia sec;
     ABBSecuencias arbol, a1, a2;
     CrearArbol(arbol);
-    ///Prueba de construir arbol para luego insertar y comparar
+    /*///Prueba de construir arbol para luego insertar y comparar
     CrearArbol(a1);
     CrearArbol(a2);
     printf("Ingrese el nombre de la primer secuencia:\n");
@@ -24,7 +24,7 @@ int main()
     arbol = constructABB(sec, a1, a2);
     printf("en el arbol hay:\n");
     mostrarEnOrden(arbol);
-    ///Hasta aca va prueba de construir arbol
+    ///Hasta aca va prueba de construir arbol*/
     do
     {
         printf("\n\nMenu Testeo\n");
@@ -38,7 +38,7 @@ int main()
                 fflush(stdin);
                 scan(texto1);
                 print(texto1);
-                cargarArregloP(arreP, texto1); 
+                cargarArregloP(arreP, texto1);
                 printf("\nEl tope era %d\n", devolverTope(arreP));
                 printf("El arreglo es:\n");
                 mostrarArregloP(arreP);
