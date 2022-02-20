@@ -22,9 +22,9 @@ Secuencia devuelveSec (ABBSecuencias a, stringD ident)
     else
     {
         if (strmen(devuelveIdent(a->info), ident))
-            return devuelveSec (a->hizq, ident);
-        else
             return devuelveSec (a->hder, ident);
+        else
+            return devuelveSec (a->hizq, ident);
     }
 }
 
@@ -51,9 +51,9 @@ void insertarSecuencia (ABBSecuencias &a, Secuencia sec)
     else
     {
         if (strmen(devuelveIdent(a->info), devuelveIdent(sec)))
-            insertarSecuencia(a->hizq , sec);
+            insertarSecuencia(a->hder , sec);
         else
-            insertarSecuencia(a->hder, sec);
+            insertarSecuencia(a->hizq, sec);
     }
 }
 
@@ -66,9 +66,22 @@ boolean Pertenece (ABBSecuencias a, stringD ident)
     else
     {
         if (strmen(devuelveIdent(a->info), ident))
-            return Pertenece(a->hizq, ident);
-        else
             return Pertenece(a->hder, ident);
+        else
+            return Pertenece(a->hizq, ident);
+    }
+}
+
+void modificaArbol (ABBSecuencias &a, Secuencia sec)
+{
+    if(streq(devuelveIdent(a->info), devuelveIdent(sec)))
+        a->info = sec;
+    else
+    {
+        if (strmen(devuelveIdent(a->info), devuelveIdent(sec)))
+            modificaArbol(a->hder, sec);
+        else
+            modificaArbol(a->hizq, sec);
     }
 }
 

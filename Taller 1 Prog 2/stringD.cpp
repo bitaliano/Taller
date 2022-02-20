@@ -128,20 +128,7 @@ boolean strmen (stringD s1,stringD s2)
         menor = TRUE;
     return menor;
 }
-/*{
-    boolean menor=TRUE;
-    int i=0;
-    while((menor)&&(s1[i]!='\0')&&(s2[i]!='\0'))
-    {
-        if(s1[i]>s2[i])
-            menor =FALSE;
-        i++;
 
-    }
-    if (s2[i]=='\0')
-        menor=FALSE;
-    return menor;
-}*/
 
 boolean streq (stringD s1,stringD s2)
 {

@@ -4,68 +4,69 @@
 
 int main()
 {
-    int opcion =0;
-    stringD texto, texto1, texto2;
-    strcrear(texto);
-    strcrear(texto1);
-    strcrear(texto2);
+    int opcion =0, numero =0;
+    stringD texto1, texto2, insertar;
+    strcrear(insertar);
     ArregloPalabras arreP;
-    Secuencia sec;
-    ABBSecuencias arbol, a1, a2;
+    Secuencia sec, sec2;
+    ABBSecuencias arbol;
     CrearArbol(arbol);
-    /*///Prueba de construir arbol para luego insertar y comparar
-    CrearArbol(a1);
-    CrearArbol(a2);
-    printf("Ingrese el nombre de la primer secuencia:\n");
-    fflush(stdin);
-    scan(texto);
-    //print(texto);
-    cargarSecuencia(sec, texto);
-    arbol = constructABB(sec, a1, a2);
-    printf("en el arbol hay:\n");
-    mostrarEnOrden(arbol);
-    ///Hasta aca va prueba de construir arbol*/
     do
     {
-        printf("\n\nMenu Testeo\n");
-        printf("Opcion 1 - Prueba palabras\n");
-        printf("Opcion 2 - Prueba create\n");
+        printf("\n\n-----Menu Testeo-----\n\n");
+        printf("Opcion 1 - Prueba separar palabras\n");
+        printf("Opcion 2 - Prueba comando create\n");
+        printf("Opcion 3 - Prueba comando show\n");
+        printf("Opcion 4 - Prueba comando insback\n");
+        printf("\nSu opcion:   ");
         scanf("%d", &opcion);
+        printf("\n");
         switch (opcion)
         {
-            case 1:
-                printf("Ingrese tres palabras separadas por espacios:\n");
-                fflush(stdin);
+            case 1:   /// SEPARAR PALABRAS
+                strcrear(texto1);
+                printf("Ingrese palabras (maximo 4 palabras), para finalizar pulse ENTER:\n");
                 scan(texto1);
-                print(texto1);
                 cargarArregloP(arreP, texto1);
-                printf("\nEl tope era %d\n", devolverTope(arreP));
-                printf("El arreglo es:\n");
                 mostrarArregloP(arreP);
+                strdestruir(texto1);
                 break;
-            case 2:
-                printf("Ingrese el nombre de la secuencia:\n");
-                scan(texto1);
-                cargarSecuencia(sec, texto1);
-                fflush(stdin);
-                insertarSecuencia(arbol, sec); //Copia la secuencia encima de las demas
-                ///Prueba para ver como anda el streq y strmen con strings desde funciones
-                if (streq(devuelveIdent(arbol->info), devuelveIdent(sec)))
-                    printf("\nIGUALES");
+            case 2:   /// COMANDO CREATE
+                strcrear(texto2);
+                printf("Ingrese el nombre de la secuencia a crear:\n");
+                scan(texto2);
+                if(Pertenece(arbol, texto2)) /// Controlo existencia
+                    printf("\nLa secuencia pertenece al arbol, debe crear una nueva");
                 else
                 {
-                    if (strmen(devuelveIdent(arbol->info), devuelveIdent(sec)))
-                        printf("\nTRUE");
-                    else
-                        printf("\nFALSE");
+                    cargarSecuencia(sec, texto2);
+                    insertarSecuencia(arbol, sec);
                 }
-                ///Aca termina la prueba de streq y strmen
+                strdestruir(texto2);
+                break;
+            case 3:   /// COMANDO SHOW
                 printf("\nEn el arbol hay:\n");
                 mostrarEnOrden(arbol);
+                break;
+            case 4:   /// COMANDO INSBACK
+                strcrear(insertar);
+                printf("\nIngrese la secuencia a la que le quiere insertar un entero:\n");
+                scan(insertar);
+                if(Pertenece(arbol, insertar))
+                {
+                    printf("\nIngrese el numero entero que desea insertar:  ");
+                    scanf("%d", &numero);
+                    sec2 = devuelveSec(arbol, insertar);
+                    modificarLista(sec2, numero);
+                    modificaArbol(arbol, sec2);
+                }
+                else
+                    printf("\nLa secuencia no pertenece al arbol, debe crearla primero");
+                strdestruir(insertar);
                 break;
             default:
                 printf("\nChau\n");
         }
-    }while (opcion <3);
+    }while (opcion <5);
     return 0;
 }

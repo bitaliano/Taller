@@ -36,6 +36,8 @@ void insertarSecuencia (ABBSecuencias &a, Secuencia sec); /// Pre condicion: La 
 boolean Pertenece (ABBSecuencias a, stringD ident);
 //Devueluve TRUE si una secuencia pertenece al arbol
 
+void modificaArbol (ABBSecuencias &a, Secuencia sec);
+
 void mostrarEnOrden (ABBSecuencias a); ///Pre condicion: ABB no vacio
 //recorre el �rbol de la forma: izq-ra�z-der y muestra en pantalla las secuencias en ese orden
 

@@ -46,13 +46,13 @@
 1645060132 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\comando.cpp
 	"Comando.h"
 
-1645231081 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\abbsecuencias.cpp
+1645333478 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\abbsecuencias.cpp
 	"ABBSecuencias.h"
 
-1645209512 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\abbsecuencias.h
+1645333478 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\abbsecuencias.h
 	"Secuencia.h"
 
-1645231081 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\secuencia.h
+1645333478 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\secuencia.h
 	"ListaNum.h"
 	"stringD.h"
 
@@ -60,7 +60,7 @@
 	"boolean.h"
 	"stringD.h"
 
-1645231081 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\stringd.h
+1645333479 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\stringd.h
 	"boolean.h"
 
 1645142803 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\arreglocomandos.cpp
@@ -78,15 +78,15 @@
 1645141897 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\listanum.cpp
 	"ListaNum.h"
 
-1645283115 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\main.cpp
+1645333507 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\main.cpp
 	<stdio.h>
 	"ABBSecuencias.h"
 	"Validaciones.h"
 
-1645231081 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\secuencia.cpp
+1645333478 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\secuencia.cpp
 	"Secuencia.h"
 
-1645283330 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\stringd.cpp
+1645333479 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\stringd.cpp
 	"stringD.h"
 
 1645117920 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\validaciones.cpp

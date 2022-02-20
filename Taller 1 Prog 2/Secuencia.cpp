@@ -17,7 +17,7 @@ void cargarSecuencia (Secuencia &sec, stringD nomSec)
 {
 	crearLista (sec.numeros);
 	strcrear (sec.id);
-	sec.id = nomSec;
+	strcop(sec.id, nomSec);
 }
 
 void mostrarSecuencia (Secuencia sec)
@@ -27,4 +27,9 @@ printf ("\nNombre: ");
 	print(sec.id);
 	printf ("\nLista de numeros: ");
 	mostrarLista(sec.numeros);
+}
+
+void modificarLista (Secuencia &sec, int num)
+{
+    insertarAtras(sec.numeros, num);
 }

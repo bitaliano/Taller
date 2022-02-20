@@ -15,7 +15,6 @@ void strdestruir (stringD &s);
 int strlar (stringD s);
 // devuelve el largo de un string. Se entiende por largo, la cantidad de caracteres antes del carácter nulo.
 
-//strcop
 void strcop(stringD &s1,stringD s2);
 // recibe dos strings y copia el  segundo en el primero.
 
@@ -38,7 +37,7 @@ boolean strmen (stringD s1,stringD s2);
 // recibe dos strings y devuelve TRUE si el primero de ellos es menor (en orden alfabético) que el segundo, o FALSE en caso contrario.
 
 boolean streq (stringD s1,stringD s2);
-//streq 	reciba dos strings y devuelve TRUE si ambos strings son iguales o FALSE en caso contrario.
+// recibe dos strings y devuelve TRUE si ambos strings son iguales o FALSE en caso contrario.
 
 
 //ARCHIVO

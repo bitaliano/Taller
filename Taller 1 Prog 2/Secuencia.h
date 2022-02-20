@@ -21,6 +21,6 @@ void cargarSecuencia (Secuencia &sec, stringD nomSec);
 void mostrarSecuencia (Secuencia sec);
 //despliega en pantalla los par�metros de sec
 
-
+void modificarLista (Secuencia &sec, int num);
 
 #endif // SECUENCIA_H_INCLUDED
