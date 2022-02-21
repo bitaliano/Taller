@@ -5,10 +5,10 @@
 int main()
 {
     int opcion =0, numero =0;
-    stringD texto1, texto2, insertar;
+    stringD texto1, texto2, insertar, sumar;
     strcrear(insertar);
     ArregloPalabras arreP;
-    Secuencia sec, sec2;
+    Secuencia sec, sec2, secSum;
     ABBSecuencias arbol;
     CrearArbol(arbol);
     do
@@ -52,7 +52,7 @@ int main()
                 strcrear(insertar);
                 printf("\nIngrese la secuencia a la que le quiere insertar un entero:\n");
                 scan(insertar);
-                if(Pertenece(arbol, insertar))
+                if(Pertenece(arbol, insertar)) /// Controlo existencia
                 {
                     printf("\nIngrese el numero entero que desea insertar:  ");
                     scanf("%d", &numero);
@@ -63,6 +63,19 @@ int main()
                 else
                     printf("\nLa secuencia no pertenece al arbol, debe crearla primero");
                 strdestruir(insertar);
+                break;
+            case 5:
+                strcrear(sumar);
+                printf("\nInserte la secuencia que quiere sumar:  ");
+                scan(sumar);
+                if(Pertenece(arbol, insertar)) /// Controlo existencia
+                {
+                    secSum = devuelveSec(arbol, sumar);
+                    printf("\nLa suma de los valores de la secuencia es: %d", sumarValores(devuelveLista(secSum)));
+                }
+                else
+                    printf("\nLa secuencia no se encuentra en el arbol");
+                strdestruir(sumar);
                 break;
             default:
                 printf("\nChau\n");

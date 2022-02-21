@@ -44,7 +44,6 @@ void mostrarArregloP (ArregloPalabras arreP)
     for (i=0; i<arreP.tope; i++)
     {
         print(arreP.arre[i]);
-        printf("\nEl largo es: %d", strlar(arreP.arre[i]));
         printf("\n");
     }
 }

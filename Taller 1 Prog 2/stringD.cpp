@@ -25,7 +25,6 @@ void strdestruir (stringD &s)
 
 
 
-
 void strcop(stringD &s1,stringD s2)
 {
     int largo, i=0;
@@ -43,7 +42,6 @@ void strcop(stringD &s1,stringD s2)
 void strcopPalabra(stringD &s1, stringD s2, int desde, int hasta)
 {
     int largo = hasta-desde, i=desde, j=0;
-    //strdestruir(s1);
     s1 = new char[largo+1];
     while (i != hasta+1)
     {
