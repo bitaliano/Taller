@@ -18,6 +18,7 @@ int main()
         printf("Opcion 2 - Prueba comando create\n");
         printf("Opcion 3 - Prueba comando show\n");
         printf("Opcion 4 - Prueba comando insback\n");
+        printf("Opcion 5 - Prueba comando sum\n");
         printf("\nSu opcion:   ");
         scanf("%d", &opcion);
         printf("\n");
@@ -80,6 +81,6 @@ int main()
             default:
                 printf("\nChau\n");
         }
-    }while (opcion <5);
+    }while (opcion <7);
     return 0;
 }
