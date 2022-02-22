@@ -48,7 +48,7 @@ void destruirABB (ABBSecuencias &a);
 // libera la memoria ocupada por el �rbol y lo deja nulo
 
 
-//PRECONDICI�N:
+
 
 
 

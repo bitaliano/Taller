@@ -60,11 +60,11 @@ void bajarLisArchivo (ListaNum l, stringD arch)
     fclose (f);
 }
 
-void levantarLisArchivo (ListaNum l, stringD arch)
+void levantarLisArchivo (ListaNum &l, stringD arch)
 {
     FILE * f = fopen (arch, "rb");
     int buffer;
-    crearLista (l);
+    //crearLista (l);
     fread(&buffer, sizeof(int), 1, f);
     while (!feof(f))
     {

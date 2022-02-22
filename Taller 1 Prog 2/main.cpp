@@ -122,9 +122,36 @@ int main()
                 printf("\nEn el arbol hay:\n");
                 mostrarEnOrden(arbol);
                 break;
+            case 9: /// COMANDO SAVE
+                strcrear(texto1);
+                printf("\nInserte el nombre de la secuencia:   ");
+                scan(texto1);
+                strcrear(texto2);
+                printf("\nInserte el nombre del archivo:   ");
+                scan(texto2);
+                sec = devuelveSec(arbol, texto1);
+                bajarLisArchivo(devuelveLista(sec),texto2);
+                strdestruir(texto1);
+                strdestruir(texto2);
+                break;
+            case 10: /// COMANDO LOAD
+                strcrear(texto2);
+                printf("\nInserte el nombre del archivo:   ");
+                scan(texto2);
+                crearLista(l);
+                levantarLisArchivo(l,texto2);
+                strcrear(texto1);
+                printf("\nInserte el nombre de la secuencia:   ");
+                scan(texto1);
+                cargarSecuencia(sec, texto1);
+                modificarSec(sec, l);
+                insertarSecuencia(arbol, sec);
+                strdestruir(texto1);
+                strdestruir(texto2);
+                break;
             default:
                 printf("\nChau\n");
         }
-    }while (opcion <9);
+    }while (opcion <11);
     return 0;
 }
