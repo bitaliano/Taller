@@ -103,3 +103,46 @@
 1645484691 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\arreglopalabras.cpp
 	"ArregloPalabras.h"
 
+1645143427 source:c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\arreglocomandos.cpp
+	"ArregloComandos.h"
+
+1644977009 c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\arreglocomandos.h
+	"Comando.h"
+
+1644977009 c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\comando.h
+	"stringD.h"
+
+1645486052 c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\stringd.h
+	"boolean.h"
+
+1645143427 c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\boolean.h
+	<stdio.h>
+
+1644880224 source:c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\boolean.cpp
+	"boolean.h"
+
+1644977009 source:c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\comando.cpp
+	"Comando.h"
+
+1644883911 source:c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\validaciones.cpp
+	"Validaciones.h"
+
+1644880224 c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\validaciones.h
+	"ArregloPalabras.h"
+	"ArregloComandos.h"
+	"ABBSecuencias.h"
+
+1645218990 c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\arreglopalabras.h
+	"stringD.h"
+
+1645565558 c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\abbsecuencias.h
+	"Secuencia.h"
+
+1645564439 c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\secuencia.h
+	"ListaNum.h"
+	"stringD.h"
+
+1645565558 c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\listanum.h
+	"boolean.h"
+	"stringD.h"
+

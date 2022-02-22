@@ -23,6 +23,8 @@ int main()
         printf("Opcion 6 - Prueba comando concat\n");
         printf("Opcion 7 - Prueba comando reverse\n");
         printf("Opcion 8 - Prueba comando exit\n");
+        printf("Opcion 9 - Prueba comando save\n");
+        printf("Opcion 10 - Prueba comando load\n");
         printf("\nSu opcion:   ");
         scanf("%d", &opcion);
         printf("\n");
