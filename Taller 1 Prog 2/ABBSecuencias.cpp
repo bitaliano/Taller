@@ -104,6 +104,19 @@ ABBSecuencias constructABB (Secuencia raiz, ABBSecuencias i, ABBSecuencias  d)
     return a;
 }
 
+/*void recorridaPostOrden (Arbol a)
+{
+
+    if (a->hizq != NULL)
+        PostOrden(a->hizq);
+
+    if (a->hder != NULL)
+        PostOrden(a->hder);
+
+    printf("%d",a->info);
+}*/
+
+
 void destruirABB (ABBSecuencias &a)
 {
     if(a!=NULL)
@@ -114,6 +127,7 @@ void destruirABB (ABBSecuencias &a)
         destruirLista(l);
         stringD s = devuelveIdent(a->info);
         strdestruir(s);
+        //mostrarEnOrden(a);
         delete(a);
         a=NULL ;
     }

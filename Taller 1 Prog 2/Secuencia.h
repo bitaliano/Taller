@@ -22,5 +22,6 @@ void mostrarSecuencia (Secuencia sec);
 //despliega en pantalla los par�metros de sec
 
 void modificarLista (Secuencia &sec, int num);
+void modificarSec (Secuencia &sec, ListaNum l);
 
 #endif // SECUENCIA_H_INCLUDED

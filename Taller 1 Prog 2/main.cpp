@@ -5,11 +5,12 @@
 int main()
 {
     int opcion =0, numero =0;
-    stringD texto1, texto2, insertar, sumar;
+    stringD texto1, texto2, texto3, insertar, sumar;
     strcrear(insertar);
     ArregloPalabras arreP;
     Secuencia sec, sec2, secSum;
     ABBSecuencias arbol;
+    ListaNum l;
     CrearArbol(arbol);
     do
     {
@@ -19,6 +20,9 @@ int main()
         printf("Opcion 3 - Prueba comando show\n");
         printf("Opcion 4 - Prueba comando insback\n");
         printf("Opcion 5 - Prueba comando sum\n");
+        printf("Opcion 6 - Prueba comando concat\n");
+        printf("Opcion 7 - Prueba comando reverse\n");
+        printf("Opcion 8 - Prueba comando exit\n");
         printf("\nSu opcion:   ");
         scanf("%d", &opcion);
         printf("\n");
@@ -65,7 +69,7 @@ int main()
                     printf("\nLa secuencia no pertenece al arbol, debe crearla primero");
                 strdestruir(insertar);
                 break;
-            case 5:
+            case 5:   /// COMANDO SUM
                 strcrear(sumar);
                 printf("\nInserte la secuencia que quiere sumar:  ");
                 scan(sumar);
@@ -78,9 +82,49 @@ int main()
                     printf("\nLa secuencia no se encuentra en el arbol");
                 strdestruir(sumar);
                 break;
+            case 6:   /// COMANDO CONCAT
+                strcrear(texto1);
+                strcrear(texto2);
+                strcrear(texto3);
+                printf("\nInserte la primer secuencia:   ");
+                scan(texto1);
+                printf("\nInserte la segunda secuencia:   ");
+                scan(texto2);
+                printf("\nInserte la secuencia concatenada:   ");
+                scan(texto3);
+                cargarSecuencia(sec, texto3);
+                crearLista(l);
+                copiarLista(devuelveLista(devuelveSec(arbol, texto2)), l);
+                copiarLista(devuelveLista(devuelveSec(arbol, texto1)), l);
+                modificarSec(sec, l);
+                insertarSecuencia(arbol, sec);
+                strdestruir(texto1);
+                strdestruir(texto2);
+                strdestruir(texto3);
+                break;
+            case 7:   /// COMANDO REVERSE
+                strcrear(texto1);
+                strcrear(texto2);
+                printf("\nInserte la primer secuencia:   ");
+                scan(texto1);
+                printf("\nInserte la segunda secuencia:   ");
+                scan(texto2);
+                cargarSecuencia(sec, texto2);
+                crearLista(l);
+                invertirLista(devuelveLista(devuelveSec(arbol, texto1)), l);
+                modificarSec(sec, l);
+                insertarSecuencia(arbol, sec);
+                strdestruir(texto1);
+                strdestruir(texto2);
+                break;
+            case 8:   /// COMANDO EXIT
+                destruirABB(arbol);
+                printf("\nEn el arbol hay:\n");
+                mostrarEnOrden(arbol);
+                break;
             default:
                 printf("\nChau\n");
         }
-    }while (opcion <7);
+    }while (opcion <9);
     return 0;
 }

@@ -80,6 +80,7 @@ void destruirLista (ListaNum &l)
     {
         ListaNum aux = l;
         l = l -> sig;
+        //mostrarLista(l);
         delete aux;
         destruirLista (l);
     }
