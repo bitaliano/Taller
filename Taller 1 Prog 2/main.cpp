@@ -4,13 +4,14 @@
 
 int main()
 {
-    int opcion =0, numero =0;
+    int opcion =0, numero =0, i,j;
     stringD texto1, texto2, texto3, insertar, sumar;
     strcrear(insertar);
     ArregloPalabras arreP;
     Secuencia sec, sec2, secSum;
     ABBSecuencias arbol;
     ListaNum l;
+    ArregloComandos arreC;
     CrearArbol(arbol);
     do
     {
@@ -25,6 +26,8 @@ int main()
         printf("Opcion 8 - Prueba comando exit\n");
         printf("Opcion 9 - Prueba comando save\n");
         printf("Opcion 10 - Prueba comando load\n");
+        printf("Opcion 11 - Prueba bajar arreglo de comandos\n");
+        printf("Opcion 12 - Prueba levantar arreglo de comandos\n");
         printf("\nSu opcion:   ");
         scanf("%d", &opcion);
         printf("\n");
@@ -151,9 +154,42 @@ int main()
                 strdestruir(texto1);
                 strdestruir(texto2);
                 break;
+            case 11: ///CREAR y BAJAR ARREGLO DE COMANDOS
+                strcrear(texto1);
+                strcrear(texto2);
+                printf("\nInserte el nombre del archivo de COMANDOS:   ");
+                scan(texto2);
+                i = 0;
+                while (i<N)
+                {
+                    fflush(stdin);
+                    printf("\nInserte el nombre del COMANDO:   ");
+                    scan(texto1);
+                    printf("\nInserte la cantidad de parametros admitida por el comando:    ");
+                    scanf("%d",&j);
+                    cargarComando(arreC[i], texto1, j);
+                    i++;
+                }
+                bajarComandos(arreC, texto2);
+                strdestruir(texto1);
+                strdestruir(texto2);
+                break;
+            case 12: ///LEVANTAR ARCHIVO COMANDOS
+                strcrear(texto1);
+                printf("\nInserte el nombre del archivo de COMANDOS:   ");
+                scan(texto1);
+                levantarComandos(arreC, texto1);
+                ///MUESTRO EL ARREGLO PARA VER CÓMO QUEDÓ
+                for(i=0; i<9; i++)
+                {
+                    printf("\nComando:  ");
+                    print(arreC[i].comand);
+                    printf("\nParametros permitidos:  %d", arreC[i].param);
+                }
+
             default:
                 printf("\nChau\n");
         }
-    }while (opcion <11);
+    }while (opcion <13);
     return 0;
 }

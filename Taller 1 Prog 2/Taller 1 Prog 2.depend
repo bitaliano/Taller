@@ -103,13 +103,13 @@
 1645484691 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\arreglopalabras.cpp
 	"ArregloPalabras.h"
 
-1645143427 source:c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\arreglocomandos.cpp
+1645568382 source:c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\arreglocomandos.cpp
 	"ArregloComandos.h"
 
-1644977009 c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\arreglocomandos.h
+1645568382 c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\arreglocomandos.h
 	"Comando.h"
 
-1644977009 c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\comando.h
+1645568382 c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\comando.h
 	"stringD.h"
 
 1645486052 c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\stringd.h
@@ -121,10 +121,10 @@
 1644880224 source:c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\boolean.cpp
 	"boolean.h"
 
-1644977009 source:c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\comando.cpp
+1645570013 source:c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\comando.cpp
 	"Comando.h"
 
-1644883911 source:c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\validaciones.cpp
+1645568382 source:c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\validaciones.cpp
 	"Validaciones.h"
 
 1644880224 c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\validaciones.h
@@ -145,4 +145,24 @@
 1645565558 c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\listanum.h
 	"boolean.h"
 	"stringD.h"
+
+1645564439 source:c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\abbsecuencias.cpp
+	"ABBSecuencias.h"
+
+1645486052 source:c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\arreglopalabras.cpp
+	"ArregloPalabras.h"
+
+1645565558 source:c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\listanum.cpp
+	"ListaNum.h"
+
+1645564439 source:c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\secuencia.cpp
+	"Secuencia.h"
+
+1645486052 source:c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\stringd.cpp
+	"stringD.h"
+
+1645570537 source:c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\main.cpp
+	<stdio.h>
+	"ABBSecuencias.h"
+	"Validaciones.h"
 

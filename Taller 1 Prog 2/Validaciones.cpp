@@ -1,6 +1,17 @@
 #include "Validaciones.h"
 
-int buscarComando (stringD s, ArregloComandos arreC);
+int buscarComando (stringD s, ArregloComandos arreC)
+{
+    int i = 0;
+    stringD com;
+    n_esimoComando(arreC,0,com);
+    while (!streq(s, com)){
+        i++;
+        n_esimoComando(arreC,i,com);
+    }
+    return i;
+    
+}
 //busca un string en el arreglo y devuelve su posici�n
 
 boolean esAlfabetico (stringD s);

@@ -52,3 +52,17 @@ void destruirComandos (ArregloComandos arre)
     }
 
 }
+
+
+void bajarComandos(ArregloComandos arreC, stringD fileName)
+{
+    FILE * f = fopen (fileName, "wb");
+    int i = 0;
+    bajarComArchivo(arreC[i], f);
+    while (!feof(f) && i < 9)
+    {
+        i++;
+        bajarComArchivo(arreC[i], f);
+    }
+    fclose (f);
+}

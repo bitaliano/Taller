@@ -18,4 +18,7 @@ boolean existeComando (ArregloComandos arre, stringD s);
 void destruirComandos (ArregloComandos arre);
 //recorre el arreglo y destruye los strings
 
+void bajarComandos(ArregloComandos arreC, stringD fileName);
+//abre el archivo y baja el arreglo con los comandos al archivo
+
 #endif // ARREGLOCOMANDOS_H_INCLUDED
