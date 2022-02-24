@@ -59,7 +59,10 @@ void resetearArregloP (ArregloPalabras &arreP)
 
 void n_esimoPalabra (ArregloPalabras arreP, int num, stringD &s)
 {
-    strcop(s, arreP.arre[num]);
+    //stringD s;
+    //strcrear(s);
+    strcop (s, arreP.arre[num]);
+    //return s;
 }
 
 int devolverTope (ArregloPalabras arreP)

@@ -6,12 +6,15 @@ boolean existeComando (stringD s, ArregloComandos arreC)
     boolean existe = FALSE;
 	int	i = 0;
     stringD com;
-    while (!existe){
+    strcrear(com);
+    while (!existe && i <9)
+    {
 		n_esimoComando(arreC,i,com);
         if (streq(com, s))
 			existe = TRUE;
 		i++;
     }
+    strdestruir(com);
     return existe;
 }
 
@@ -19,11 +22,13 @@ int buscarComando (stringD s, ArregloComandos arreC)
 {
     int i = 0;
     stringD com;
+    strcrear(com);
     n_esimoComando(arreC,0,com);
     while (!streq(s, com)){
         i++;
         n_esimoComando(arreC,i,com);
     }
+    strdestruir(com);
     return i;
 }
 

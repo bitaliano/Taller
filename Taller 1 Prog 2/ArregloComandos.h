@@ -12,7 +12,7 @@ void levantarComandos (ArregloComandos &arreC, stringD fileName);
 void n_esimoComando (ArregloComandos arre, int num, stringD &s);
 //devuelve el string cargado en la posicion num del arreglo
 
-boolean existeComando (ArregloComandos arre, stringD s);
+//boolean existeComando (ArregloComandos arre, stringD s);
 //devuelve TRUE si el string pasado por parametro es un comando existente en el arreglo
 
 void destruirComandos (ArregloComandos arre);

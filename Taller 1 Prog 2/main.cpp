@@ -4,18 +4,29 @@
 
 int main()
 {
-    int opcion =0, numero =0, i,j;
-    stringD texto1, texto2, textoCon, insertar, sumar;
-    strcrear(insertar);
+    int opcion =0, i=0,j;
+    stringD texto1, texto2, textoCon, insertar, sumar, textoCom;
     ArregloPalabras arreP;
     Secuencia sec, sec2, secSum;
     ABBSecuencias arbol;
     ListaNum l;
     ArregloComandos arreC;
+    levantarComandos(arreC, "arreCom.txt");
     CrearArbol(arbol);
     do
     {
-        printf("\n\n-----Menu Testeo-----\n\n");
+        printf("\nIngrese comando> ");
+        strcrear(texto2);
+        scan(texto2);
+        cargarArregloP(arreP, texto2);
+        strcrear(textoCom);
+        n_esimoPalabra(arreP, 0, textoCom);
+        if (!existeComando(textoCom, arreC))
+            mensajeError(1);
+        else
+            opcion = buscarComando(textoCom, arreC);
+        strdestruir(textoCom);
+      /*printf("\n\n-----Menu Testeo-----\n\n");
         printf("Opcion 1 - Prueba comando create\n");
         printf("Opcion 2 - Prueba comando show\n");
         printf("Opcion 3 - Prueba comando insback\n");
@@ -32,48 +43,37 @@ int main()
         printf("Opcion 14 - Prueba control es nombre de archivo\n");
         printf("\nSu opcion:   ");
         scanf("%d", &opcion);
-        printf("\n");
+        printf("\n");*/
         switch (opcion)
         {
-            case 1:   /// COMANDO CREATE
-                strcrear(texto2);
-                printf("Ingrese el comando: ");
-                scan(texto2);
-                cargarArregloP(arreP, texto2);
-                if(Pertenece(arbol, arreP.arre[1]))
+            case 5:       /// COMANDO CREATE
+                strcrear(textoCom);
+                n_esimoPalabra(arreP, 1, textoCom);
+                if(Pertenece(arbol, textoCom))
                     mensajeError(5);
                 else
                 {
-                    cargarSecuencia(sec, arreP.arre[1]);
+                    cargarSecuencia(sec, textoCom);
                     insertarSecuencia(arbol, sec);
                 }
-                strdestruir(texto2);
+                strdestruir(textoCom);
                 break;
-            case 2:   /// COMANDO SHOW
-                strcrear(texto2);
-                printf("Ingrese el comando: ");
-                scan(texto2);
-                cargarArregloP(arreP, texto2);
+            case 1:   /// COMANDO SHOW
                 printf("\nEn el arbol hay:\n");
                 mostrarEnOrden(arbol);
                 break;
-            case 3:   /// COMANDO INSBACK
-                strcrear(insertar);
-                printf("\nIngrese la secuencia a la que le quiere insertar un entero:\n");
-                scan(insertar);
-                if(Pertenece(arbol, insertar)) /// Controlo existencia
+            case 8:   /// COMANDO INSBACK
+                if(Pertenece(arbol, arreP.arre[1])) /// Controlo existencia
                 {
-                    printf("\nIngrese el numero entero que desea insertar:  ");
-                    scanf("%d", &numero);
-                    sec2 = devuelveSec(arbol, insertar);
-                    modificarLista(sec2, numero);
+                    sec2 = devuelveSec(arbol, arreP.arre[1]);
+                    modificarLista(sec2, convertirString(arreP.arre[2]));
                     modificaArbol(arbol, sec2);
                 }
                 else
-                    printf("\nLa secuencia no pertenece al arbol, debe crearla primero");
+                    mensajeError(5);
                 strdestruir(insertar);
                 break;
-            case 4:   /// COMANDO SUM
+            case 0:   /// COMANDO SUM
                 strcrear(sumar);
                 printf("Ingrese el comando: ");
                 scan(sumar);
@@ -94,7 +94,7 @@ int main()
                 }
                 strdestruir(sumar);
                 break;
-            case 5:   /// COMANDO CONCAT
+            case 6:   /// COMANDO CONCAT
                 strcrear(textoCon);
                 printf("Ingrese el comando: ");
                 scan(textoCon);
@@ -107,7 +107,7 @@ int main()
                 insertarSecuencia(arbol, sec);
                 strdestruir(textoCon);
                 break;
-            case 6:   /// COMANDO REVERSE
+            case 7:   /// COMANDO REVERSE
                 strcrear(texto1);
                 strcrear(texto2);
                 printf("\nInserte la primer secuencia:   ");
@@ -122,12 +122,12 @@ int main()
                 strdestruir(texto1);
                 strdestruir(texto2);
                 break;
-            case 7:   /// COMANDO EXIT
+            case 4:   /// COMANDO EXIT
                 destruirABB(arbol);
                 printf("\nEn el arbol hay:\n");
                 mostrarEnOrden(arbol);
                 break;
-            case 8: /// COMANDO SAVE
+            case 2: /// COMANDO SAVE
                 strcrear(texto1);
                 printf("\nInserte el nombre de la secuencia:   ");
                 scan(texto1);
@@ -139,7 +139,7 @@ int main()
                 strdestruir(texto1);
                 strdestruir(texto2);
                 break;
-            case 9: /// COMANDO LOAD
+            case 3: /// COMANDO LOAD
                 strcrear(texto2);
                 printf("\nInserte el nombre del archivo:   ");
                 scan(texto2);
@@ -154,7 +154,7 @@ int main()
                 strdestruir(texto1);
                 strdestruir(texto2);
                 break;
-            case 10: ///CREAR y BAJAR ARREGLO DE COMANDOS
+            /*case 10: ///CREAR y BAJAR ARREGLO DE COMANDOS
                 strcrear(texto1);
                 strcrear(texto2);
                 printf("\nInserte el nombre del archivo de COMANDOS:   ");
@@ -213,10 +213,11 @@ int main()
                 else
                     printf("La primera palabra NO es un nombre de archivo valido");
                 strdestruir(texto1);
-                break;
+                break;*/
             default:
                 printf("\nChau\n");
+                break;
         }
-    }while (opcion <15);
+    }while (opcion !=4);
     return 0;
 }

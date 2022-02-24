@@ -15,15 +15,13 @@ void levantarComandos (ArregloComandos &arreC, stringD fileName)
     fclose (f);
 }
 
-
-
 void n_esimoComando (ArregloComandos arre, int num, stringD &s)
 {
     devuelveNomCom(arre[num],s);
 }
 
 
-boolean existeComando (ArregloComandos arre, stringD s)
+/*boolean existeComando (ArregloComandos arre, stringD s)
 {
     boolean existe = FALSE;
     int i = 0;
@@ -38,8 +36,7 @@ boolean existeComando (ArregloComandos arre, stringD s)
         }
     }
     return existe;
-}
-
+}*/
 
 void destruirComandos (ArregloComandos arre)
 {
@@ -50,7 +47,6 @@ void destruirComandos (ArregloComandos arre)
         devuelveNomCom(arre[i],s);
         strdestruir(s);
     }
-
 }
 
 
