@@ -5,7 +5,7 @@
 int main()
 {
     int opcion =0, numero =0, i,j;
-    stringD texto1, texto2, texto3, insertar, sumar;
+    stringD texto1, texto2, textoCon, insertar, sumar;
     strcrear(insertar);
     ArregloPalabras arreP;
     Secuencia sec, sec2, secSum;
@@ -46,13 +46,14 @@ int main()
                 break;
             case 2:   /// COMANDO CREATE
                 strcrear(texto2);
-                printf("Ingrese el nombre de la secuencia a crear:\n");
+                printf("Ingrese create seguido de la secuencia a crear:\n");
                 scan(texto2);
-                if(Pertenece(arbol, texto2)) /// Controlo existencia
+                cargarArregloP(arreP, texto2);
+                if(Pertenece(arbol, arreP.arre[1])) /// Controlo existencia
                     printf("\nLa secuencia pertenece al arbol, debe crear una nueva");
                 else
                 {
-                    cargarSecuencia(sec, texto2);
+                    cargarSecuencia(sec, arreP.arre[1]);
                     insertarSecuencia(arbol, sec);
                 }
                 strdestruir(texto2);
@@ -79,11 +80,12 @@ int main()
                 break;
             case 5:   /// COMANDO SUM
                 strcrear(sumar);
-                printf("\nInserte la secuencia que quiere sumar:  ");
+                printf("\nIngrese sum seguido de la secuencia a sumar:  \n");
                 scan(sumar);
-                if(Pertenece(arbol, insertar)) /// Controlo existencia
+                cargarArregloP(arreP, sumar);
+                if(Pertenece(arbol, arreP.arre[1])) /// Controlo existencia
                 {
-                    secSum = devuelveSec(arbol, sumar);
+                    secSum = devuelveSec(arbol, arreP.arre[1]);
                     printf("\nLa suma de los valores de la secuencia es: %d", sumarValores(devuelveLista(secSum)));
                 }
                 else
@@ -91,24 +93,17 @@ int main()
                 strdestruir(sumar);
                 break;
             case 6:   /// COMANDO CONCAT
-                strcrear(texto1);
-                strcrear(texto2);
-                strcrear(texto3);
-                printf("\nInserte la primer secuencia:   ");
-                scan(texto1);
-                printf("\nInserte la segunda secuencia:   ");
-                scan(texto2);
-                printf("\nInserte la secuencia concatenada:   ");
-                scan(texto3);
-                cargarSecuencia(sec, texto3);
+                strcrear(textoCon);
+                printf("\nInserte concat seguido de las dos secuencias a concatenar y por ultimo la nueva secuencia:\n");
+                scan(textoCon);
+                cargarArregloP(arreP, textoCon);
+                cargarSecuencia(sec, arreP.arre[3]);
                 crearLista(l);
-                copiarLista(devuelveLista(devuelveSec(arbol, texto2)), l);
-                copiarLista(devuelveLista(devuelveSec(arbol, texto1)), l);
+                copiarLista(devuelveLista(devuelveSec(arbol, arreP.arre[2])), l);
+                copiarLista(devuelveLista(devuelveSec(arbol, arreP.arre[1])), l);
                 modificarSec(sec, l);
                 insertarSecuencia(arbol, sec);
-                strdestruir(texto1);
-                strdestruir(texto2);
-                strdestruir(texto3);
+                strdestruir(textoCon);
                 break;
             case 7:   /// COMANDO REVERSE
                 strcrear(texto1);
