@@ -16,41 +16,32 @@ int main()
     do
     {
         printf("\n\n-----Menu Testeo-----\n\n");
-        printf("Opcion 1 - Prueba separar palabras\n");
-        printf("Opcion 2 - Prueba comando create\n");
-        printf("Opcion 3 - Prueba comando show\n");
-        printf("Opcion 4 - Prueba comando insback\n");
-        printf("Opcion 5 - Prueba comando sum\n");
-        printf("Opcion 6 - Prueba comando concat\n");
-        printf("Opcion 7 - Prueba comando reverse\n");
-        printf("Opcion 8 - Prueba comando exit\n");
-        printf("Opcion 9 - Prueba comando save\n");
-        printf("Opcion 10 - Prueba comando load\n");
-        printf("Opcion 11 - Prueba bajar arreglo de comandos\n");
-        printf("Opcion 12 - Prueba levantar arreglo de comandos\n");
-        printf("Opcion 13 - Prueba control es alfabetico\n");
-        printf("Opcion 14 - Prueba control es numerico\n");
-        printf("Opcion 15 - Prueba control es nombre de archivo\n");
+        printf("Opcion 1 - Prueba comando create\n");
+        printf("Opcion 2 - Prueba comando show\n");
+        printf("Opcion 3 - Prueba comando insback\n");
+        printf("Opcion 4 - Prueba comando sum\n");
+        printf("Opcion 5 - Prueba comando concat\n");
+        printf("Opcion 6 - Prueba comando reverse\n");
+        printf("Opcion 7 - Prueba comando exit\n");
+        printf("Opcion 8 - Prueba comando save\n");
+        printf("Opcion 9 - Prueba comando load\n");
+        printf("Opcion 10 - Prueba bajar arreglo de comandos\n");
+        printf("Opcion 11 - Prueba levantar arreglo de comandos\n");
+        printf("Opcion 12 - Prueba control es alfabetico\n");
+        printf("Opcion 13 - Prueba control es numerico\n");
+        printf("Opcion 14 - Prueba control es nombre de archivo\n");
         printf("\nSu opcion:   ");
         scanf("%d", &opcion);
         printf("\n");
         switch (opcion)
         {
-            case 1:   /// SEPARAR PALABRAS
-                strcrear(texto1);
-                printf("Ingrese palabras (maximo 4 palabras), para finalizar pulse ENTER:\n");
-                scan(texto1);
-                cargarArregloP(arreP, texto1);
-                mostrarArregloP(arreP);
-                strdestruir(texto1);
-                break;
-            case 2:   /// COMANDO CREATE
+            case 1:   /// COMANDO CREATE
                 strcrear(texto2);
-                printf("Ingrese create seguido de la secuencia a crear:\n");
+                printf("Ingrese el comando: ");
                 scan(texto2);
                 cargarArregloP(arreP, texto2);
-                if(Pertenece(arbol, arreP.arre[1])) /// Controlo existencia
-                    printf("\nLa secuencia pertenece al arbol, debe crear una nueva");
+                if(Pertenece(arbol, arreP.arre[1]))
+                    mensajeError(5);
                 else
                 {
                     cargarSecuencia(sec, arreP.arre[1]);
@@ -58,11 +49,15 @@ int main()
                 }
                 strdestruir(texto2);
                 break;
-            case 3:   /// COMANDO SHOW
+            case 2:   /// COMANDO SHOW
+                strcrear(texto2);
+                printf("Ingrese el comando: ");
+                scan(texto2);
+                cargarArregloP(arreP, texto2);
                 printf("\nEn el arbol hay:\n");
                 mostrarEnOrden(arbol);
                 break;
-            case 4:   /// COMANDO INSBACK
+            case 3:   /// COMANDO INSBACK
                 strcrear(insertar);
                 printf("\nIngrese la secuencia a la que le quiere insertar un entero:\n");
                 scan(insertar);
@@ -78,23 +73,30 @@ int main()
                     printf("\nLa secuencia no pertenece al arbol, debe crearla primero");
                 strdestruir(insertar);
                 break;
-            case 5:   /// COMANDO SUM
+            case 4:   /// COMANDO SUM
                 strcrear(sumar);
-                printf("\nIngrese sum seguido de la secuencia a sumar:  \n");
+                printf("Ingrese el comando: ");
                 scan(sumar);
                 cargarArregloP(arreP, sumar);
-                if(Pertenece(arbol, arreP.arre[1])) /// Controlo existencia
+                if (!esAlfabetico(arreP.arre[1]))
                 {
-                    secSum = devuelveSec(arbol, arreP.arre[1]);
-                    printf("\nLa suma de los valores de la secuencia es: %d", sumarValores(devuelveLista(secSum)));
+                    mensajeError(2);
                 }
                 else
-                    printf("\nLa secuencia no se encuentra en el arbol");
+                {
+                    if(!Pertenece(arbol, arreP.arre[1]))
+                        mensajeError(6);
+                    else
+                    {
+                        secSum = devuelveSec(arbol, arreP.arre[1]);
+                        printf("\nLa suma de los valores de la secuencia es: %d", sumarValores(devuelveLista(secSum)));
+                    }
+                }
                 strdestruir(sumar);
                 break;
-            case 6:   /// COMANDO CONCAT
+            case 5:   /// COMANDO CONCAT
                 strcrear(textoCon);
-                printf("\nInserte concat seguido de las dos secuencias a concatenar y por ultimo la nueva secuencia:\n");
+                printf("Ingrese el comando: ");
                 scan(textoCon);
                 cargarArregloP(arreP, textoCon);
                 cargarSecuencia(sec, arreP.arre[3]);
@@ -105,7 +107,7 @@ int main()
                 insertarSecuencia(arbol, sec);
                 strdestruir(textoCon);
                 break;
-            case 7:   /// COMANDO REVERSE
+            case 6:   /// COMANDO REVERSE
                 strcrear(texto1);
                 strcrear(texto2);
                 printf("\nInserte la primer secuencia:   ");
@@ -120,12 +122,12 @@ int main()
                 strdestruir(texto1);
                 strdestruir(texto2);
                 break;
-            case 8:   /// COMANDO EXIT
+            case 7:   /// COMANDO EXIT
                 destruirABB(arbol);
                 printf("\nEn el arbol hay:\n");
                 mostrarEnOrden(arbol);
                 break;
-            case 9: /// COMANDO SAVE
+            case 8: /// COMANDO SAVE
                 strcrear(texto1);
                 printf("\nInserte el nombre de la secuencia:   ");
                 scan(texto1);
@@ -137,7 +139,7 @@ int main()
                 strdestruir(texto1);
                 strdestruir(texto2);
                 break;
-            case 10: /// COMANDO LOAD
+            case 9: /// COMANDO LOAD
                 strcrear(texto2);
                 printf("\nInserte el nombre del archivo:   ");
                 scan(texto2);
@@ -152,7 +154,7 @@ int main()
                 strdestruir(texto1);
                 strdestruir(texto2);
                 break;
-            case 11: ///CREAR y BAJAR ARREGLO DE COMANDOS
+            case 10: ///CREAR y BAJAR ARREGLO DE COMANDOS
                 strcrear(texto1);
                 strcrear(texto2);
                 printf("\nInserte el nombre del archivo de COMANDOS:   ");
@@ -172,7 +174,7 @@ int main()
                 strdestruir(texto1);
                 strdestruir(texto2);
                 break;
-            case 12: ///LEVANTAR ARCHIVO COMANDOS
+            case 11: ///LEVANTAR ARCHIVO COMANDOS
                 strcrear(texto1);
                 printf("\nInserte el nombre del archivo de COMANDOS:   ");
                 scan(texto1);
@@ -185,7 +187,7 @@ int main()
                     printf("\nParametros permitidos:  %d", arreC[i].param);
                 }
                 break;
-            case 13: ///Es alfabetico
+            case 12: ///Es alfabetico
                 strcrear(texto1);
                 n_esimoPalabra(arreP,0,texto1);
                 if (esAlfabetico(texto1))
@@ -194,7 +196,7 @@ int main()
                     printf("La primera palabra NO es alfabetica");
                 strdestruir(texto1);
                 break;
-            case 14: ///Es numerico
+            case 13: ///Es numerico
                 strcrear(texto1);
                 n_esimoPalabra(arreP,0,texto1);
                 if (esNumerico(texto1))
@@ -203,7 +205,7 @@ int main()
                     printf("La primera palabra NO es numerica");
                 strdestruir(texto1);
                 break;
-            case 15: ///Es nombre de archivo
+            case 14: ///Es nombre de archivo
                 strcrear(texto1);
                 n_esimoPalabra(arreP,0,texto1);
                 if (esNomArchivo(texto1))
@@ -215,6 +217,6 @@ int main()
             default:
                 printf("\nChau\n");
         }
-    }while (opcion <16);
+    }while (opcion <15);
     return 0;
 }

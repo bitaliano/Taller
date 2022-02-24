@@ -49,27 +49,27 @@
 1645489849 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\abbsecuencias.cpp
 	"ABBSecuencias.h"
 
-1645672539 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\abbsecuencias.h
+1645724697 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\abbsecuencias.h
 	"Secuencia.h"
 
-1645487065 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\secuencia.h
+1645724697 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\secuencia.h
 	"ListaNum.h"
 	"stringD.h"
 
-1645672539 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\listanum.h
+1645724697 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\listanum.h
 	"boolean.h"
 	"stringD.h"
 
-1645333479 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\stringd.h
+1645724697 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\stringd.h
 	"boolean.h"
 
 1645672539 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\arreglocomandos.cpp
 	"ArregloComandos.h"
 
-1645672539 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\arreglocomandos.h
+1645724697 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\arreglocomandos.h
 	"Comando.h"
 
-1645672539 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\comando.h
+1645724697 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\comando.h
 	"stringD.h"
 
 1645672539 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\comando.cpp
@@ -78,7 +78,7 @@
 1645672539 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\listanum.cpp
 	"ListaNum.h"
 
-1645724600 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\main.cpp
+1645732353 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\main.cpp
 	<stdio.h>
 	"ABBSecuencias.h"
 	"Validaciones.h"
@@ -86,18 +86,18 @@
 1645487065 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\secuencia.cpp
 	"Secuencia.h"
 
-1645485973 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\stringd.cpp
+1645724697 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\stringd.cpp
 	"stringD.h"
 
-1645672539 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\validaciones.cpp
+1645732060 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\validaciones.cpp
 	"Validaciones.h"
 
-1644879549 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\validaciones.h
+1645724697 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\validaciones.h
 	"ArregloPalabras.h"
 	"ArregloComandos.h"
 	"ABBSecuencias.h"
 
-1645206401 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\arreglopalabras.h
+1645724697 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\arreglopalabras.h
 	"stringD.h"
 
 1645484691 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\arreglopalabras.cpp

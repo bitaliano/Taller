@@ -3,7 +3,7 @@
 
 boolean existeComando (stringD s, ArregloComandos arreC)
 {
-    existe = FALSE;
+    boolean existe = FALSE;
 	int	i = 0;
     stringD com;
     while (!existe){
