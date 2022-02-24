@@ -12,12 +12,13 @@ typedef nodoLista * ListaNum;
 
 
 void crearLista (ListaNum &l);
-//crea una lista vac�a
+//crea una lista vacia
 
 boolean ListaVacia(ListaNum l);
+//devuelve TRUE si la lista está vacía
 
 void mostrarLista (ListaNum l);
-//despliega la lista en pantalla en el orden que fueron ingresados los n�meros
+//despliega la lista en pantalla en el orden que fueron ingresados los numeros
 
 int sumarValores (ListaNum l);
 //suma los valores de la lista
@@ -29,8 +30,8 @@ void bajarLisArchivo (ListaNum l, stringD arch);
 //abre el archivo, baja la lista al archivo y cierra el archivo
 
 void levantarLisArchivo (ListaNum &l, stringD arch);
-//abre el archivo y crea la lista con los n�meros del archivo
-//PRECONDICI�N: el archivo debe existir
+//abre el archivo y crea la lista con los numeros del archivo
+//PRECONDICIoN: el archivo debe existir
 
 void destruirLista (ListaNum &l);
 /* liberala memoria ocupada por la lista y deja el puntero nulo*/
