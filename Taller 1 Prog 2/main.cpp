@@ -28,6 +28,9 @@ int main()
         printf("Opcion 10 - Prueba comando load\n");
         printf("Opcion 11 - Prueba bajar arreglo de comandos\n");
         printf("Opcion 12 - Prueba levantar arreglo de comandos\n");
+        printf("Opcion 13 - Prueba control es alfabetico\n");
+        printf("Opcion 14 - Prueba control es numerico\n");
+        printf("Opcion 15 - Prueba control es nombre de archivo\n");
         printf("\nSu opcion:   ");
         scanf("%d", &opcion);
         printf("\n");
@@ -186,10 +189,37 @@ int main()
                     print(arreC[i].comand);
                     printf("\nParametros permitidos:  %d", arreC[i].param);
                 }
-
+                break;
+            case 13: ///Es alfabetico
+                strcrear(texto1);
+                n_esimoPalabra(arreP,0,texto1);
+                if (esAlfabetico(texto1))
+                    printf("*La primera palabra es alfabetica*");
+                else
+                    printf("La primera palabra NO es alfabetica");
+                strdestruir(texto1);
+                break;
+            case 14: ///Es numerico
+                strcrear(texto1);
+                n_esimoPalabra(arreP,0,texto1);
+                if (esNumerico(texto1))
+                    printf("*La primera palabra es numerica*");
+                else
+                    printf("La primera palabra NO es numerica");
+                strdestruir(texto1);
+                break;
+            case 15: ///Es nombre de archivo
+                strcrear(texto1);
+                n_esimoPalabra(arreP,0,texto1);
+                if (esNomArchivo(texto1))
+                    printf("*La primera palabra es un nombre de archivo valido*");
+                else
+                    printf("La primera palabra NO es un nombre de archivo valido");
+                strdestruir(texto1);
+                break;
             default:
                 printf("\nChau\n");
         }
-    }while (opcion <13);
+    }while (opcion <16);
     return 0;
 }

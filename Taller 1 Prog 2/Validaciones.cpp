@@ -10,19 +10,36 @@ int buscarComando (stringD s, ArregloComandos arreC)
         n_esimoComando(arreC,i,com);
     }
     return i;
-    
+
 }
-//busca un string en el arreglo y devuelve su posici�n
 
-boolean esAlfabetico (stringD s);
-//devuelve TRUE si el string es puramente alfab�tico
+boolean esAlfabetico (stringD s)
+{
+    boolean esalfa=TRUE;
+    int i=0;
+    while((esalfa)&&(s[i]!='\0'))
+    {
+        if( s[i]<'A' || (s[i]>'Z' && s[i]<'a') || s[i]>'z' )
+            esalfa =FALSE;
+        i++;
+    }
+    return esalfa;
+}
 
-boolean cantParamCorrecta (ArregloPalabras arreP, Comando com);
+boolean cantParamCorrecta (ArregloPalabras arreP, Comando com)
+{
+    boolean correcto=TRUE;
+    if (devolverTope(arreP)!=devuelveCantParam(com))
+        correcto=FALSE;
+    return correcto;
+}
 /*devuelve TRUE si el arreglo de palabras tiene la cantidad correcta de par�metros definidos para el comando*/
 
-boolean existeSecuencia (stringD ident, ABBSecuencias a);
-/*devuelve TRUE si existe en el �rbol una secuencia que coincida con el identificador que se pasa como par�metro*/
-//PRECONDICI�N: a !esVacioABB
+boolean existeSecuencia (stringD ident, ABBSecuencias a)
+{
+    return Pertenece(a,ident);
+}
+
 
 void mensajeError (int codError)
 {
@@ -31,11 +48,11 @@ void mensajeError (int codError)
     case 1:
         printf("Se ha excedido el limite de parametros permitidos para el comando ingresado");
         break;
-    
+
     case 2:
         printf("Los caracteres ingresados deben ser alfabeticos solamente");
         break;
-    
+
     case 3:
         printf("El nombre del archivo debe finalizar en .txt");
         break;
@@ -43,7 +60,7 @@ void mensajeError (int codError)
     case 4:
         printf("El parametro debe ser numerico");
         break;
-    
+
     case 5:
         printf("El identificador ingresado ya existe en memoria");
         break;
@@ -51,12 +68,12 @@ void mensajeError (int codError)
     case 6:
         printf("El identificador ingresado no existe en memoria");
         break;
-    
-    case 7: 
+
+    case 7:
         printf("El archivo ingresado por parametro ya existe");
         break;
 
-    case 8: 
+    case 8:
         printf("El archivo ingresado por parametro no existe");
         break;
 
@@ -66,11 +83,55 @@ void mensajeError (int codError)
 }
 
 
-boolean esNumerico (stringD s);
+boolean esNumerico (stringD s)
+{
+    boolean esnum=TRUE;
+    int i=0;
+    while((esnum)&&(s[i]!='\0'))
+    {
+        if(s[i]<'0' || s[i]>'9')
+            esnum =FALSE;
+        i++;
+    }
+    return esnum;
+}
 //devuelve TRUE si el string es num�rico
 
-boolean esNomArchivo (stringD s);
-//devuelve TRUE si el nombre es alfab�tico hasta el punto y termina en .txt
+boolean esNomArchivo (stringD s)
+{
+    boolean esarch=TRUE;
+    int i=0;
+    while( (esarch) && (s[i]!='\0') && (s[i]!='.'))
+    {
+        if( ((s[i]<'A') && (s[i]>'Z')) && ((s[i]<'a') && (s[i]>'z')) )
+            esarch =FALSE;
+        i++;
+    }
+    if(s[i]=='\0' || !esarch)
+        esarch =FALSE;
+    else
+    {
+        i++;
+        if (s[i]!='t')
+            esarch =FALSE;
+        else if (s[i+1]!='x')
+            esarch =FALSE;
+        else if (s[i+2]!='t')
+            esarch =FALSE;
+        else if (s[i+3]!='\0')
+            esarch =FALSE;
+    }
+    return esarch;
+}
 
-boolean existeArchivo (stringD nomArch);
-//devuelve TRUE si existe un archivo con el nombre pasado por par�metro
+
+boolean existeArchivo (stringD nomArch)
+{
+    boolean existeArchivo = TRUE;
+    FILE * f = fopen (nomArch, "rb");
+    if (f == NULL)
+        existeArchivo = FALSE;
+    else
+        fclose (f);
+    return existeArchivo;
+}
