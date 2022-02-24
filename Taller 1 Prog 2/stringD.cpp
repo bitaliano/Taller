@@ -143,10 +143,23 @@ boolean streq (stringD s1,stringD s2)
     return igual;
 }
 
-
-int convertirString (stringD s);  
-//convierte strings numéricos en números enteros 
-//PRECONDICIÓN: s esNumerico 
+int convertirString (stringD s)
+{
+	int i = 0, j, num = 0, largo;
+	largo = strlar(s);
+	for (j=1; j<largo; j++)
+		j = j*10;
+	while (s[i]!='\0')
+	{
+		if (s[i] >= '0' && s[i] <= '9') 
+		{
+            num = s[i] * j + num;
+        }
+		j = j/10;
+		i++;
+	}
+    return num;
+}
 
 
 void Bajar_String (stringD s, FILE * f)
