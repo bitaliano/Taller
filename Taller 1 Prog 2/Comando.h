@@ -15,7 +15,7 @@ void devuelveNomCom (Comando com, stringD &s);
 //devuelve en el string pasado por referencia el nombre de un comando
 
 int devuelveCantParam (Comando com);
-//devuelve la cantidad de par�metros que permite un comando
+//devuelve la cantidad de parametros que permite un comando
 
 void levantarComArchivo (Comando &com, FILE *f);
 //recibe el archivo abierto y carga el un comando

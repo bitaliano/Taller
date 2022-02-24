@@ -1,5 +1,20 @@
 #include "Validaciones.h"
 
+
+boolean existeComando (stringD s, ArregloComandos arreC)
+{
+    existe = FALSE;
+	int	i = 0;
+    stringD com;
+    while (!existe){
+		n_esimoComando(arreC,i,com);
+        if (streq(com, s))
+			existe = TRUE;
+		i++;
+    }
+    return existe;
+}
+
 int buscarComando (stringD s, ArregloComandos arreC)
 {
     int i = 0;
@@ -10,7 +25,6 @@ int buscarComando (stringD s, ArregloComandos arreC)
         n_esimoComando(arreC,i,com);
     }
     return i;
-
 }
 
 boolean esAlfabetico (stringD s)

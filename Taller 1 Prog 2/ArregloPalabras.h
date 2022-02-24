@@ -10,7 +10,7 @@ typedef struct{ stringD arre [TAM];
 
 
 void cargarArregloP (ArregloPalabras &arreP, stringD texto);
-//dado un arreglo y un string, carga las diferentes palabras del string en cada posici�n del arreglo, hasta un m�ximo de 4 palabras
+//dado un arreglo y un string, carga las diferentes palabras del string en cada posicion del arreglo, hasta un maximo de 4 palabras
 
 void mostrarArregloP (ArregloPalabras arreP);
 //muestra por pantalla los strings cargados en el arreglo
@@ -19,7 +19,7 @@ void resetearArregloP (ArregloPalabras &arreP);
 //destruye los strings y setea el tope a 0
 
 void n_esimoPalabra (ArregloPalabras arreP, int num, stringD &s);
-//devuelve el string cargado en la posici�n num del arreglo
+//devuelve el string cargado en la posicion num del arreglo
 
 int devolverTope (ArregloPalabras arreP);
 //devuelve el valor del tope del arreglo

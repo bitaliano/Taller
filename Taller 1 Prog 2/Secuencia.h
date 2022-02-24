@@ -13,15 +13,18 @@ stringD devuelveIdent (Secuencia sec);
 //dada una secuencia devuelve el identificador
 
 ListaNum devuelveLista(Secuencia sec);
-//dada una secuencia devuelve la lista de n�meros
+//dada una secuencia devuelve la lista de numeros
 
 void cargarSecuencia (Secuencia &sec, stringD nomSec);
-//carga los valores identificador y n�merosen la secuencia
+//carga los valores identificador y numeros en la secuencia
 
 void mostrarSecuencia (Secuencia sec);
-//despliega en pantalla los par�metros de sec
+//despliega en pantalla los parametros de sec
 
 void modificarLista (Secuencia &sec, int num);
+//inserta el numero pasado por parametro en la lista de una secuencia
+
 void modificarSec (Secuencia &sec, ListaNum l);
+//carga una lista pasada por parametro en la secuencia
 
 #endif // SECUENCIA_H_INCLUDED

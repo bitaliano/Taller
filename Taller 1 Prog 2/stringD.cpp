@@ -7,7 +7,6 @@ void strcrear (stringD &s)
 }
 
 
-
 void strdestruir (stringD &s)
 {
     delete[]s;
@@ -24,7 +23,6 @@ void strdestruir (stringD &s)
  }
 
 
-
 void strcop(stringD &s1,stringD s2)
 {
     int largo, i=0;
@@ -39,6 +37,7 @@ void strcop(stringD &s1,stringD s2)
     s1[i]='\0';
 }
 
+
 void strcopPalabra(stringD &s1, stringD s2, int desde, int hasta)
 {
     int largo = hasta-desde, i=desde, j=0;
@@ -51,6 +50,7 @@ void strcopPalabra(stringD &s1, stringD s2, int desde, int hasta)
     }
     s1[j] = '\0';
 }
+
 
  void scan (stringD &s)
  {
@@ -143,7 +143,24 @@ boolean streq (stringD s1,stringD s2)
     return igual;
 }
 
-//ARCHIVO
+int convertirString (stringD s)
+{
+	int i = 0, j, num = 0, largo;
+	largo = strlar(s);
+	for (j=1; j<largo; j++)
+		j = j*10;
+	while (s[i]!='\0')
+	{
+		if (s[i] >= '0' && s[i] <= '9') 
+		{
+            num = s[i] * j + num;
+        }
+		j = j/10;
+		i++;
+	}
+    return num;
+}
+
 
 void Bajar_String (stringD s, FILE * f)
 {
