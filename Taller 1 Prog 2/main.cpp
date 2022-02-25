@@ -65,7 +65,7 @@ int main()
                 else
                 {
                     if (esVacioABB(arbol))
-                        printf("El arbol es vacio"); /// agregar mensaje de error
+                        mensajeError(9); 
                     else
                     {
                         printf("\nResultado:\n");  /// cambiar como se muestra
@@ -183,7 +183,7 @@ int main()
                                 {
                                     do
                                     {
-                                        printf("\n¿Desea sobreescribir el archivo?   S/N\n");
+                                        printf("\nÂ¿Desea sobreescribir el archivo?   S/N\n");
                                         fflush(stdin);
                                         scanf("%c", &c);
                                         if( c == 'S' || c == 's')
