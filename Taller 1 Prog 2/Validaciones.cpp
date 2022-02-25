@@ -1,6 +1,15 @@
 #include "Validaciones.h"
 
 
+void cantParamTotal (ArregloPalabras arreP)
+{
+    if (devolverTope(arreP) == 5)
+    {
+        resetearArregloP(arreP);
+        mensajeError(1);
+    }
+}
+
 boolean existeComando (stringD s, ArregloComandos arreC)
 {
     boolean existe = FALSE;
@@ -64,16 +73,18 @@ void mensajeError (int codError)
 {
     switch (codError)
     {
-    case 1:
-        printf("Se ha excedido el limite de parametros permitidos para el comando ingresado");
+    case 0:
+        printf("\nEl comando ingresado no existe\n");
         break;
-
+    case 1:
+        printf("\nSe ha excedido el limite de parametros permitidos para el comando ingresado\n");
+        break;
     case 2:
-        printf("Los caracteres ingresados deben ser alfabeticos solamente");
+        printf("\nLos caracteres ingresados deben ser alfabeticos solamente\n");
         break;
 
     case 3:
-        printf("El nombre del archivo debe finalizar en .txt");
+        printf("\nEl nombre del archivo debe finalizar en .txt");
         break;
 
     case 4:
@@ -81,7 +92,7 @@ void mensajeError (int codError)
         break;
 
     case 5:
-        printf("El identificador ingresado ya existe en memoria");
+        printf("\nEl identificador ingresado ya existe en memoria\n");
         break;
 
     case 6:

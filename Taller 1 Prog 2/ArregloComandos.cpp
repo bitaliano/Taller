@@ -20,6 +20,10 @@ void n_esimoComando (ArregloComandos arre, int num, stringD &s)
     devuelveNomCom(arre[num],s);
 }
 
+Comando darComando (ArregloComandos arre, int num)
+{
+    return arre[num];
+}
 
 /*boolean existeComando (ArregloComandos arre, stringD s)
 {

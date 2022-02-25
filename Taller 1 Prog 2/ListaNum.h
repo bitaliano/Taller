@@ -26,7 +26,7 @@ int sumarValores (ListaNum l);
 void insertarAtras (ListaNum &l, int num);
 //dada una lista y un valor, ingresa el valor al final de la lista.
 
-void bajarLisArchivo (ListaNum l, stringD arch);
+void bajarLisArchivo (ListaNum l, stringD arch); /// Pre condicion: lista no vacia
 //abre el archivo, baja la lista al archivo y cierra el archivo
 
 void levantarLisArchivo (ListaNum &l, stringD arch);

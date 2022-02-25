@@ -21,4 +21,6 @@ void destruirComandos (ArregloComandos arre);
 void bajarComandos(ArregloComandos arreC, stringD fileName);
 //abre el archivo y baja el arreglo con los comandos al archivo
 
+Comando darComando (ArregloComandos arre, int num);
+
 #endif // ARREGLOCOMANDOS_H_INCLUDED

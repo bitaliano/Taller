@@ -18,9 +18,9 @@ void cargarArregloP (ArregloPalabras &arreP, stringD texto)
             //Guardo indice de comienzo palabra
             if (arreP.tope==4)
             {
-                printf("El comando ingresado excede el limite de parametros permitidos"); //se debe modificar por la funcion con codigo de error
+                //mensajeError(1);
                 lleno = TRUE;
-                resetearArregloP (arreP);
+                //resetearArregloP (arreP);
             }
             k=i+1;
         }
@@ -36,6 +36,8 @@ void cargarArregloP (ArregloPalabras &arreP, stringD texto)
         }
         i++;
     }
+    if (texto[i]!='\0')
+        arreP.tope ++;
 }
 
 void mostrarArregloP (ArregloPalabras arreP)
@@ -59,10 +61,7 @@ void resetearArregloP (ArregloPalabras &arreP)
 
 void n_esimoPalabra (ArregloPalabras arreP, int num, stringD &s)
 {
-    //stringD s;
-    //strcrear(s);
     strcop (s, arreP.arre[num]);
-    //return s;
 }
 
 int devolverTope (ArregloPalabras arreP)

@@ -56,17 +56,17 @@
 	"ListaNum.h"
 	"stringD.h"
 
-1645724697 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\listanum.h
+1645749505 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\listanum.h
 	"boolean.h"
 	"stringD.h"
 
 1645724697 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\stringd.h
 	"boolean.h"
 
-1645741829 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\arreglocomandos.cpp
+1645747063 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\arreglocomandos.cpp
 	"ArregloComandos.h"
 
-1645741829 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\arreglocomandos.h
+1645747063 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\arreglocomandos.h
 	"Comando.h"
 
 1645724697 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\comando.h
@@ -78,7 +78,7 @@
 1645672539 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\listanum.cpp
 	"ListaNum.h"
 
-1645743501 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\main.cpp
+1645749649 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\main.cpp
 	<stdio.h>
 	"ABBSecuencias.h"
 	"Validaciones.h"
@@ -89,10 +89,10 @@
 1645740478 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\stringd.cpp
 	"stringD.h"
 
-1645743433 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\validaciones.cpp
+1645746664 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\validaciones.cpp
 	"Validaciones.h"
 
-1645741829 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\validaciones.h
+1645745886 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\validaciones.h
 	"ArregloPalabras.h"
 	"ArregloComandos.h"
 	"ABBSecuencias.h"
@@ -100,7 +100,7 @@
 1645741547 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\arreglopalabras.h
 	"stringD.h"
 
-1645741547 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\arreglopalabras.cpp
+1645746158 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\arreglopalabras.cpp
 	"ArregloPalabras.h"
 
 1645568382 source:c:\users\nosotrostres\desktop\leti\ude\taller 1\taller\taller 1 prog 2\arreglocomandos.cpp
