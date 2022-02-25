@@ -176,21 +176,22 @@ int main()
                         else
                         {
                             sec = devuelveSec(arbol, textoCom);
-                            mostrarSecuencia (sec);
                             if (ListaVacia(devuelveLista(sec)))
                                 printf("Error"); /// agregar mensaje de error
                             else
                             {
                                 if (existeArchivo(textoArch))
                                 {
-                                    printf("\n¿Desea sobreescribir el archivo?   S/N\n");
-                                    scanf("%c", &c);
-                                    while (c != 'S' || c != 's' || c!= 'N' || c!= 'n')
+                                    do
                                     {
+                                        printf("\n¿Desea sobreescribir el archivo?   S/N\n");
                                         fflush(stdin);
-                                        if( c != 'S' || c != 's')
+                                        scanf("%c", &c);
+                                        if( c == 'S' || c == 's')
                                             bajarLisArchivo(devuelveLista(sec),textoArch);
+                                        printf("prueba dentro de while");
                                     }
+                                    while (c != 'S' && c != 's' && c!= 'N' && c!= 'n');
                                 }
                                 else
                                     bajarLisArchivo(devuelveLista(sec),textoArch);
