@@ -74,37 +74,37 @@ void mensajeError (int codError)
     switch (codError)
     {
     case 0:
-        printf("\nEl comando ingresado no existe\n");
+        printf("\n Error: El comando ingresado no existe\n");
         break;
     case 1:
-        printf("\nSe ha excedido el limite de parametros permitidos para el comando ingresado\n");
+        printf("\n Error: El numero de parametros ingresados excede el limite de parametros permitidos\n");
         break;
     case 2:
-        printf("\nLos caracteres ingresados deben ser alfabeticos solamente\n");
+        printf("\n Error: Los caracteres ingresados deben ser alfabeticos solamente\n");
         break;
 
     case 3:
-        printf("\nEl nombre del archivo debe finalizar en .txt");
+        printf("\n Error: El nombre del archivo debe finalizar en .txt\n");
         break;
 
     case 4:
-        printf("El parametro debe ser numerico");
+        printf("\n Error: El segundo parametro debe ser numerico\n");
         break;
 
     case 5:
-        printf("\nEl identificador ingresado ya existe en memoria\n");
+        printf("\n Error: El identificador ingresado ya existe en memoria\n");
         break;
 
     case 6:
-        printf("El identificador ingresado no existe en memoria");
+        printf("\n Error: El identificador ingresado no existe en memoria\n");
         break;
 
     case 7:
-        printf("El archivo ingresado por parametro ya existe");
+        printf("\n Error: El archivo ingresado por parametro ya existe\n");
         break;
 
     case 8:
-        printf("El archivo ingresado por parametro no existe");
+        printf("\n Error: El archivo ingresado por parametro no existe\n");
         break;
 
     default:

@@ -22,7 +22,7 @@ int main()
     CrearArbol(arbol);
     do
     {
-        printf("\nIngrese comando> ");
+        printf("\nIngrese comando: ");
         strcrear(texto2);
         scan(texto2);
         cargarArregloP(arreP, texto2);
@@ -153,8 +153,7 @@ int main()
                 break;
             case 4:     /// COMANDO EXIT
                 destruirABB(arbol);
-                printf("\nEn el arbol hay:\n");
-                mostrarEnOrden(arbol);
+                printf("\nHasta la proxima\n");
                 break;
             case 2:     /// COMANDO SAVE
                 strcrear(textoCom);

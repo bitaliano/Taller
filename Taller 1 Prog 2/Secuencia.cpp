@@ -23,10 +23,11 @@ void cargarSecuencia (Secuencia &sec, stringD nomSec)
 void mostrarSecuencia (Secuencia sec)
 
 {
-printf ("\nNombre: ");
+    printf ("          ");
 	print(sec.id);
-	printf ("\nLista de numeros: ");
+	printf (" = ");
 	mostrarLista(sec.numeros);
+	printf("\n");
 }
 
 void modificarSec (Secuencia &sec, ListaNum l)
