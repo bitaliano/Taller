@@ -77,7 +77,7 @@ void mensajeError (int codError)
         printf("\n Error: El comando ingresado no existe\n");
         break;
     case 1:
-        printf("\n Error: El numero de parametros ingresados excede el limite de parametros permitidos\n");
+        printf("\n Error: Cantidad de parámetros incorrecta\n");
         break;
     case 2:
         printf("\n Error: Los caracteres ingresados deben ser alfabeticos solamente\n");
@@ -107,6 +107,14 @@ void mensajeError (int codError)
         printf("\n Error: El archivo ingresado por parametro no existe\n");
         break;
 
+    case 9:
+        printf("\n Error: No existen secuencias en memoria\n");
+        break;		
+		    
+    case 10:
+        printf("\n Error: La lista de la secuencia está vacia\n");
+        break;		
+		    
     default:
         break;
     }
