@@ -126,7 +126,7 @@ int main()
                         else
                         {
                             secSum = devuelveSec(arbol, param1);
-                            printf("Resultado:\t %d", sumarValores(devuelveLista(secSum)));
+                            printf("Resultado:\t %d\n", sumarValores(devuelveLista(secSum)));
                         }
                     }
                     strdestruir(param1);
@@ -230,7 +230,7 @@ int main()
                 else
                 {
                     destruirABB(arbol);
-                    printf("\nHasta la proxima\n");
+                    printf("Resultado:\t hasta la proxima\n");
                 }
                 break;
             case 2:     /// COMANDO SAVE
@@ -263,7 +263,9 @@ int main()
                                     {
                                         do
                                         {
-                                            printf("¿Desea sobreescribir el archivo?  s/n:\n");
+                                            printf ("Resultado:\t ");
+                                            print(param2);
+                                            printf(" ya existe en disco, ¿sobreescribe? (S/N)? ");
                                             fflush(stdin);
                                             scanf("%c", &c);
                                             if( c == 'S' || c == 's')
@@ -307,7 +309,7 @@ int main()
                     else
                     {
                         if (!existeArchivo(param1))
-                            mensajeError(3);
+                            mensajeError(11);
                         else
                         {
                             strcrear(param2);
@@ -325,6 +327,7 @@ int main()
                                     cargarSecuencia(sec, param2);
                                     modificarSec(sec, l);
                                     insertarSecuencia(arbol, sec);
+                                    mostrarPrimerSecuencia(sec);
                                 }
                             }
                             strdestruir(param2);
