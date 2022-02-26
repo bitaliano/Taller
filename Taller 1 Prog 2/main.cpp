@@ -6,7 +6,7 @@ int main()
 {
     int opcion=9, i=0, j;
     char c;
-    stringD texto1, texto2, textoCon, textoInt, textoCom, textoArch;
+    stringD param1, param2, param3, textoCom, texto;
     ArregloPalabras arreP;
     Secuencia sec, sec2, secSum;
     ABBSecuencias arbol;
@@ -23,9 +23,9 @@ int main()
     do
     {
         printf("\nIngrese comando: ");
-        strcrear(texto2);
-        scan(texto2);
-        cargarArregloP(arreP, texto2);
+        strcrear(texto);
+        scan(texto);
+        cargarArregloP(arreP, texto);
         if (canttParamInvalido(arreP))
             mensajeError(1);
         else
@@ -42,27 +42,27 @@ int main()
         switch (opcion)
         {
             case 5:     /// COMANDO CREATE
-                strcrear(textoCom);
-                n_esimoPalabra(arreP, 1, textoCom);
                 if (!cantParamCorrecta(arreP, darComando(arreC, 5)))
                     mensajeError(1);
                 else
                 {
-                    if (!esAlfabetico(textoCom))
+                    strcrear(param1);
+                    n_esimoPalabra(arreP, 1, param1);
+                    if (!esAlfabetico(param1))
                         mensajeError(2);
                     else
                     {
-                        if(Pertenece(arbol, textoCom))
+                        if(Pertenece(arbol, param1))
                             mensajeError(5);
                         else
                         {
-                            cargarSecuencia(sec, textoCom);
+                            cargarSecuencia(sec, param1);
                             insertarSecuencia(arbol, sec);
                             mostrarPrimerSecuencia(sec);
                         }
                     }
+                    strdestruir(param1);
                 }
-                strdestruir(textoCom);
                 break;
             case 1:     /// COMANDO SHOW
                 if (!cantParamCorrecta(arreP, darComando(arreC, 1)))
@@ -79,188 +79,260 @@ int main()
                 }
                 break;
             case 8:     /// COMANDO INSBACK
-                strcrear(textoCom);
-                strcrear(textoInt);
-                n_esimoPalabra(arreP, 1, textoCom);
-                n_esimoPalabra(arreP, 2, textoInt);
                 if (!cantParamCorrecta(arreP, darComando(arreC, 8)))
                     mensajeError(1);
                 else
                 {
-                    if (!esAlfabetico(textoCom))
+                    strcrear(param1);
+                    n_esimoPalabra(arreP, 1, param1);
+                    if (!esAlfabetico(param1))
                         mensajeError(2);
                     else
                     {
-                        if(!Pertenece(arbol, textoCom)) /// Controlo existencia
+                        if(!Pertenece(arbol, param1)) /// Controlo existencia
                             mensajeError(6);
                         else
                         {
-                            if (!esNumerico(textoInt))
+                            strcrear(param2);
+                            n_esimoPalabra(arreP, 2, param2);
+                            if (!esNumerico(param2))
                                 mensajeError(4);
                             else
                             {
-                                sec2 = devuelveSec(arbol, textoCom);
-                                modificarLista(sec2, convertirString(textoInt));
+                                sec2 = devuelveSec(arbol, param1);
+                                modificarLista(sec2, convertirString(param2));
                                 modificaArbol(arbol, sec2);
                                 mostrarPrimerSecuencia(sec2);
                             }
+                            strdestruir(param2);
                         }
                     }
+                    strdestruir(param1);
                 }
-                strdestruir(textoCom);
-                strdestruir(textoInt);
                 break;
             case 0:     /// COMANDO SUM
-                strcrear(textoCom);
-                n_esimoPalabra(arreP, 1, textoCom);
-                if (!esAlfabetico(textoCom))
-                {
-                    mensajeError(2);
-                }
+                if (!cantParamCorrecta(arreP, darComando(arreC, 0)))
+                    mensajeError(1);
                 else
                 {
-                    if(!Pertenece(arbol, textoCom))
-                        mensajeError(6);
+                    strcrear(param1);
+                    n_esimoPalabra(arreP, 1, param1);
+                    if (!esAlfabetico(param1))
+                        mensajeError(2);
                     else
                     {
-                        secSum = devuelveSec(arbol, textoCom);
-                        printf("\nLa suma de los valores de la secuencia es: %d", sumarValores(devuelveLista(secSum)));
-                    }
-                }
-                strdestruir(textoCom);
-                break;
-            case 6:     /// COMANDO CONCAT
-                strcrear(textoCon);
-                printf("Ingrese el comando: ");
-                scan(textoCon);
-                cargarArregloP(arreP, textoCon);
-                cargarSecuencia(sec, arreP.arre[3]);
-                crearLista(l);
-                copiarLista(devuelveLista(devuelveSec(arbol, arreP.arre[1])), l);
-                copiarLista(devuelveLista(devuelveSec(arbol, arreP.arre[2])), l);
-                modificarSec(sec, l);
-                insertarSecuencia(arbol, sec);
-                strdestruir(textoCon);
-                break;
-            case 7:     /// COMANDO REVERSE
-                strcrear(texto1);
-                strcrear(texto2);
-                printf("\nInserte la primer secuencia:   ");
-                scan(texto1);
-                printf("\nInserte la segunda secuencia:   ");
-                scan(texto2);
-                cargarSecuencia(sec, texto2);
-                crearLista(l);
-                invertirLista(devuelveLista(devuelveSec(arbol, texto1)), l);
-                modificarSec(sec, l);
-                insertarSecuencia(arbol, sec);
-                strdestruir(texto1);
-                strdestruir(texto2);
-                break;
-            case 4:     /// COMANDO EXIT
-                destruirABB(arbol);
-                printf("\nHasta la proxima\n");
-                break;
-            case 2:     /// COMANDO SAVE
-                strcrear(textoCom);
-                strcrear(textoArch);
-                n_esimoPalabra(arreP, 1, textoCom);
-                n_esimoPalabra(arreP, 2, textoArch);
-                if (!esAlfabetico(textoCom))
-                    mensajeError(2);
-                else
-                {
-                    if(!Pertenece(arbol, textoCom)) /// Controlo existencia
-                        mensajeError(6);
-                    else
-                    {
-                        if (!esNomArchivo(textoArch))
-                            mensajeError(3);
+                        if(!Pertenece(arbol, param1))
+                            mensajeError(6);
                         else
                         {
-                            sec = devuelveSec(arbol, textoCom);
-                            if (ListaVacia(devuelveLista(sec)))
-                                printf("Error"); /// agregar mensaje de error
-                            else
-                            {
-                                if (existeArchivo(textoArch))
-                                {
-                                    do
-                                    {
-                                        printf("\n¿Desea sobreescribir el archivo?   S/N\n");
-                                        fflush(stdin);
-                                        scanf("%c", &c);
-                                        if( c == 'S' || c == 's')
-                                            bajarLisArchivo(devuelveLista(sec),textoArch);
-                                        printf("prueba dentro de while");
-                                    }
-                                    while (c != 'S' && c != 's' && c!= 'N' && c!= 'n');
-                                }
-                                else
-                                    bajarLisArchivo(devuelveLista(sec),textoArch);
-                            }
+                            secSum = devuelveSec(arbol, param1);
+                            printf("Resultado:\t %d", sumarValores(devuelveLista(secSum)));
                         }
                     }
+                    strdestruir(param1);
                 }
-                strdestruir(textoCom);
-                strdestruir(textoArch);
                 break;
-            case 3: /// COMANDO LOAD
-                strcrear(textoCom);
-                strcrear(textoArch);
-                n_esimoPalabra(arreP, 1, textoArch);
-                n_esimoPalabra(arreP, 2, textoCom);
-                if (!esNomArchivo(textoArch))
-                    mensajeError(3);
+            case 6:     /// COMANDO CONCAT
+                if (!cantParamCorrecta(arreP, darComando(arreC, 6)))
+                    mensajeError(1);
                 else
                 {
-                    if (!existeArchivo(textoArch))
+                    strcrear(param1);
+                    n_esimoPalabra(arreP, 1, param1);
+                    if (!esAlfabetico(param1))
+                        mensajeError(2);
+                    else
+                    {
+                        if(!Pertenece(arbol, param1)) /// Controlo existencia
+                            mensajeError(6);
+                        else
+                        {
+                            strcrear(param2);
+                            n_esimoPalabra(arreP, 2, param2);
+                            if (!esAlfabetico(param2))
+                                mensajeError(2);
+                            else
+                            {
+                                if(!Pertenece(arbol, param2)) /// Controlo existencia
+                                    mensajeError(6);
+                                else
+                                {
+                                    strcrear(param3);
+                                    n_esimoPalabra(arreP, 3, param3);
+                                    if (!esAlfabetico(param2))
+                                        mensajeError(2);
+                                    else
+                                    {
+                                        if(Pertenece(arbol, param3)) /// Controlo existencia
+                                            mensajeError(5);
+                                        else
+                                        {
+                                            cargarSecuencia(sec, param3);
+                                            crearLista(l);
+                                            copiarLista(devuelveLista(devuelveSec(arbol, param1)), l);
+                                            copiarLista(devuelveLista(devuelveSec(arbol, param2)), l);
+                                            modificarSec(sec, l);
+                                            insertarSecuencia(arbol, sec);
+                                            mostrarPrimerSecuencia(sec);
+                                        }
+                                    }
+                                    strdestruir(param3);
+                                }
+                            }
+                            strdestruir(param2);
+                        }
+                    }
+                    strdestruir(param1);
+                }
+                break;
+            case 7:     /// COMANDO REVERSE
+                if (!cantParamCorrecta(arreP, darComando(arreC, 7)))
+                    mensajeError(1);
+                else
+                {
+                    strcrear(param1);
+                    n_esimoPalabra(arreP, 1, param1);
+                    if (!esAlfabetico(param1))
+                        mensajeError(2);
+                    else
+                    {
+                        if(!Pertenece(arbol, param1)) /// Controlo existencia
+                            mensajeError(6);
+                        else
+                        {
+                            strcrear(param2);
+                            n_esimoPalabra(arreP, 2, param2);
+                            if (!esAlfabetico(param1))
+                                mensajeError(2);
+                            else
+                            {
+                                if(Pertenece(arbol, param2)) /// Controlo existencia
+                                    mensajeError(5);
+                                else
+                                {
+                                    cargarSecuencia(sec, param2);
+                                    crearLista(l);
+                                    invertirLista(devuelveLista(devuelveSec(arbol, param1)), l);
+                                    modificarSec(sec, l);
+                                    insertarSecuencia(arbol, sec);
+                                    mostrarPrimerSecuencia(sec);
+                                }
+                            }
+                            strdestruir(param2);
+                        }
+                    }
+                    strdestruir(param1);
+                }
+                break;
+            case 4:     /// COMANDO EXIT
+                if (!cantParamCorrecta(arreP, darComando(arreC, 4)))
+                    mensajeError(1);
+                else
+                {
+                    destruirABB(arbol);
+                    printf("\nHasta la proxima\n");
+                }
+                break;
+            case 2:     /// COMANDO SAVE
+                if (!cantParamCorrecta(arreP, darComando(arreC, 2)))
+                    mensajeError(1);
+                else
+                {
+                    strcrear(param1);
+                    n_esimoPalabra(arreP, 1, param1);
+                    if (!esAlfabetico(param1))
+                        mensajeError(2);
+                    else
+                    {
+                        if(!Pertenece(arbol, param1)) /// Controlo existencia
+                            mensajeError(6);
+                        else
+                        {
+                            strcrear(param2);
+                            n_esimoPalabra(arreP, 2, param2);
+                            if (!esNomArchivo(param2))
+                                mensajeError(3);
+                            else
+                            {
+                                sec = devuelveSec(arbol, param1);
+                                if (ListaVacia(devuelveLista(sec)))
+                                    printf("Error"); /// agregar mensaje de error
+                                else
+                                {
+                                    if (existeArchivo(param2))
+                                    {
+                                        do
+                                        {
+                                            printf("¿Desea sobreescribir el archivo?  s/n:\n");
+                                            fflush(stdin);
+                                            scanf("%c", &c);
+                                            if( c == 'S' || c == 's')
+                                            {
+                                                bajarLisArchivo(devuelveLista(sec),param2);
+                                                printf ("Resultado:\t ");
+                                                print(param1);
+                                                printf(" almacenada correctamente en ");
+                                                print(param2);
+                                                printf ("\n");
+                                            }
+                                        }
+                                        while (c != 'S' && c != 's' && c!= 'N' && c!= 'n');
+                                    }
+                                    else
+                                    {
+                                        bajarLisArchivo(devuelveLista(sec),param2);
+                                        printf ("Resultado:\t ");
+                                        print(param1);
+                                        printf(" almacenada correctamente en ");
+                                        print(param2);
+                                        printf ("\n");
+                                    }
+                                }
+                            }
+                            strdestruir(param2);
+                        }
+                    }
+                    strdestruir(param1);
+                }
+                break;
+            case 3: /// COMANDO LOAD
+                if (!cantParamCorrecta(arreP, darComando(arreC, 3)))
+                    mensajeError(1);
+                else
+                {
+                    strcrear(param1);
+                    n_esimoPalabra(arreP, 1, param1);
+                    if (!esNomArchivo(param1))
                         mensajeError(3);
                     else
                     {
-                        if (!esAlfabetico(textoCom))
-                            mensajeError(2);
+                        if (!existeArchivo(param1))
+                            mensajeError(3);
                         else
                         {
-                            if(Pertenece(arbol, textoCom)) /// Controlo existencia
-                                mensajeError(5);
+                            strcrear(param2);
+                            n_esimoPalabra(arreP, 2, param2);
+                            if (!esAlfabetico(param2))
+                                mensajeError(2);
                             else
                             {
-                                crearLista(l);
-                                levantarLisArchivo(l,textoArch);
-                                cargarSecuencia(sec, textoCom);
-                                modificarSec(sec, l);
-                                insertarSecuencia(arbol, sec);
+                                if(Pertenece(arbol, param2)) /// Controlo existencia
+                                    mensajeError(5);
+                                else
+                                {
+                                    crearLista(l);
+                                    levantarLisArchivo(l,param1);
+                                    cargarSecuencia(sec, param2);
+                                    modificarSec(sec, l);
+                                    insertarSecuencia(arbol, sec);
+                                }
                             }
+                            strdestruir(param2);
                         }
                     }
+                    strdestruir(param1);
                 }
-                strdestruir(textoCom);
-                strdestruir(textoArch);
-               /* strcrear(texto2);
-                printf("\nInserte el nombre del archivo:   ");
-                scan(texto2);
-                crearLista(l);
-                levantarLisArchivo(l,texto2);
-                strcrear(texto1);
-                printf("\nInserte el nombre de la secuencia:   ");
-                scan(texto1);
-                cargarSecuencia(sec, texto1);
-                modificarSec(sec, l);
-                insertarSecuencia(arbol, sec);
-                strdestruir(texto1);
-                strdestruir(texto2);*/
                 break;
-            /*
-            case 14: ///Es nombre de archivo
-                strcrear(texto1);
-                n_esimoPalabra(arreP,0,texto1);
-                if (esNomArchivo(texto1))
-                    printf("*La primera palabra es un nombre de archivo valido*");
-                else
-                    printf("La primera palabra NO es un nombre de archivo valido");
-                strdestruir(texto1);
-                break;*/
             default:
                 break;
         }
