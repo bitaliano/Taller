@@ -4,7 +4,7 @@
 
 int main()
 {
-    int opcion=9, i=0, j;
+    int opcion=9;
     char c;
     stringD param1, param2, param3, textoCom, texto;
     ArregloPalabras arreP;
@@ -13,12 +13,6 @@ int main()
     ListaNum l;
     ArregloComandos arreC;
     levantarComandos(arreC, "arreCom.txt");
-    /*for(i=0; i<9; i++)
-    {
-        printf("\nComando:  ");
-        print(arreC[i].comand);
-        printf("\nParametros permitidos:  %d", arreC[i].param);
-    }*/
     CrearArbol(arbol);
     do
     {
@@ -26,8 +20,14 @@ int main()
         strcrear(texto);
         scan(texto);
         cargarArregloP(arreP, texto);
-        if (canttParamInvalido(arreP))
+        strdestruir(texto);
+        if(devolverTope(arreP)==0)
+            mensajeError(12);
+        else if (cantParamInvalido(arreP))
+        {
             mensajeError(1);
+            opcion = 9;
+        }
         else
         {
             strcrear(textoCom);
@@ -159,7 +159,7 @@ int main()
                                 {
                                     strcrear(param3);
                                     n_esimoPalabra(arreP, 3, param3);
-                                    if (!esAlfabetico(param2))
+                                    if (!esAlfabetico(param3))
                                         mensajeError(2);
                                     else
                                     {
@@ -174,6 +174,7 @@ int main()
                                             modificarSec(sec, l);
                                             insertarSecuencia(arbol, sec);
                                             mostrarPrimerSecuencia(sec);
+                                            destruirLista(l);
                                         }
                                     }
                                     strdestruir(param3);
@@ -202,7 +203,7 @@ int main()
                         {
                             strcrear(param2);
                             n_esimoPalabra(arreP, 2, param2);
-                            if (!esAlfabetico(param1))
+                            if (!esAlfabetico(param2))
                                 mensajeError(2);
                             else
                             {
@@ -216,6 +217,7 @@ int main()
                                     modificarSec(sec, l);
                                     insertarSecuencia(arbol, sec);
                                     mostrarPrimerSecuencia(sec);
+                                    destruirLista(l);
                                 }
                             }
                             strdestruir(param2);
@@ -328,6 +330,7 @@ int main()
                                     modificarSec(sec, l);
                                     insertarSecuencia(arbol, sec);
                                     mostrarPrimerSecuencia(sec);
+                                    destruirLista(l);
                                 }
                             }
                             strdestruir(param2);

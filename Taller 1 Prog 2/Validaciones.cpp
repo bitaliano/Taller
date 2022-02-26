@@ -10,7 +10,7 @@ void cantParamTotal (ArregloPalabras arreP)
     }
 }*/
 
-boolean canttParamInvalido (ArregloPalabras arreP)
+boolean cantParamInvalido (ArregloPalabras arreP)
 {
     boolean lleno=FALSE;
     if (devolverTope(arreP) == 5)
@@ -69,7 +69,7 @@ boolean cantParamCorrecta (ArregloPalabras arreP, Comando com)
         correcto=FALSE;
     return correcto;
 }
-/*devuelve TRUE si el arreglo de palabras tiene la cantidad correcta de par�metros definidos para el comando*/
+
 
 boolean existeSecuencia (stringD ident, ABBSecuencias a)
 {
@@ -82,42 +82,44 @@ void mensajeError (int codError)
     switch (codError)
     {
     case 0:
-        printf("ERROR: El comando ingresado no existe\n");
+        printf("\nERROR: El comando ingresado no existe\n");
         break;
     case 1:
-        printf("ERROR: Cantidad de parametros incorrecta\n");
+        printf("\nERROR: Cantidad de parametros incorrecta\n");
         break;
     case 2:
-        printf("ERROR: Los caracteres ingresados deben ser alfabeticos solamente\n");
+        printf("\nERROR: Los caracteres ingresados deben ser alfabeticos solamente\n");
         break;
     case 3:
-        printf("ERROR: El nombre del archivo debe finalizar en .txt\n");
+        printf("\nERROR: El nombre del archivo debe finalizar en .txt\n");
         break;
     case 4:
-        printf("ERROR: El segundo parametro debe ser numerico\n");
+        printf("\nERROR: El segundo parametro debe ser numerico\n");
         break;
     case 5:
-        printf("ERROR: El identificador ingresado ya existe en memoria\n");
+        printf("\nERROR: El identificador ingresado ya existe en memoria\n");
         break;
     case 6:
-        printf("ERROR: El identificador ingresado no existe en memoria\n");
+        printf("\nERROR: El identificador ingresado no existe en memoria\n");
         break;
     case 7:
-        printf("ERROR: El archivo ingresado por parametro ya existe\n");
+        printf("\nERROR: El archivo ingresado por parametro ya existe\n");
         break;
     case 8:
-        printf("ERROR: El archivo ingresado por parametro no existe\n");
+        printf("\nERROR: El archivo ingresado por parametro no existe\n");
         break;
     case 9:
-        printf("ERROR: No existen secuencias en memoria\n");
+        printf("\nERROR: No existen secuencias en memoria\n");
         break;
     case 10:
-        printf("ERROR: La lista de la secuencia está vacia\n");
+        printf("\nERROR: La lista de la secuencia está vacia\n");
         break;
     case 11:
-        printf("ERROR: El archiivo no existe\n");
+        printf("\nERROR: El archivo no existe\n");
         break;
-
+    case 12:
+        printf("\nERROR: El comando no puede ser vacio\n");
+        break;
     default:
         break;
     }

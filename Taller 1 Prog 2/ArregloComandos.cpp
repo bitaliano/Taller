@@ -25,22 +25,6 @@ Comando darComando (ArregloComandos arre, int num)
     return arre[num];
 }
 
-/*boolean existeComando (ArregloComandos arre, stringD s)
-{
-    boolean existe = FALSE;
-    int i = 0;
-    stringD nombre;
-    strcrear(nombre);
-    while (!existe && i < 9)
-    {
-        n_esimoComando(arre, i, nombre);
-        if (streq(s, nombre))
-        {
-            existe = TRUE;
-        }
-    }
-    return existe;
-}*/
 
 void destruirComandos (ArregloComandos arre)
 {

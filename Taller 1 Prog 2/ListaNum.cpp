@@ -66,7 +66,6 @@ void levantarLisArchivo (ListaNum &l, stringD arch)
 {
     FILE * f = fopen (arch, "rb");
     int buffer;
-    //crearLista (l);
     fread(&buffer, sizeof(int), 1, f);
     while (!feof(f))
     {
@@ -82,7 +81,6 @@ void destruirLista (ListaNum &l)
     {
         ListaNum aux = l;
         l = l -> sig;
-        //mostrarLista(l);
         delete aux;
         destruirLista (l);
     }
