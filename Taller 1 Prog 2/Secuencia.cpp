@@ -20,10 +20,20 @@ void cargarSecuencia (Secuencia &sec, stringD nomSec)
 	strcop(sec.id, nomSec);
 }
 
+void mostrarPrimerSecuencia (Secuencia sec)
+
+{
+    printf ("Resultado:\t ");
+	print(sec.id);
+	printf (" = ");
+	mostrarLista(sec.numeros);
+	printf("\n");
+}
+
 void mostrarSecuencia (Secuencia sec)
 
 {
-    printf ("          ");
+    printf ("\t\t ");
 	print(sec.id);
 	printf (" = ");
 	mostrarLista(sec.numeros);

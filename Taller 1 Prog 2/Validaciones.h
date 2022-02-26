@@ -5,7 +5,8 @@
 #include "ArregloComandos.h"
 #include "ABBSecuencias.h"
 
-void cantParamTotal (ArregloPalabras arreP);
+//void cantParamTotal (ArregloPalabras arreP);
+boolean canttParamInvalido (ArregloPalabras arreP);
 
 boolean existeComando (stringD s, ArregloComandos arreC);
 //devuelve TRUE si existe en el arreglo de comandos un comando que coincida con el nombre pasado por parámetro

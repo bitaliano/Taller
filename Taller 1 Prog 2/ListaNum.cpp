@@ -15,11 +15,13 @@ boolean ListaVacia(ListaNum l)
 
 void mostrarLista (ListaNum l)
 {
-    printf("[ ");
+    printf("[");
     while(l!=NULL)
     {
-        printf("%d ", l->info);
+        printf("%d", l->info);
         l=l->sig;
+        if (l!=NULL)
+            printf(" ");
     }
     printf("]");
 }

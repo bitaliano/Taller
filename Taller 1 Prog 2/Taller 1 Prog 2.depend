@@ -5,7 +5,7 @@
 1645740960 c:\users\nlaur\documents\github\taller\taller 1 prog 2\abbsecuencias.h
 	"Secuencia.h"
 
-1645740960 c:\users\nlaur\documents\github\taller\taller 1 prog 2\secuencia.h
+1645832525 c:\users\nlaur\documents\github\taller\taller 1 prog 2\secuencia.h
 	"ListaNum.h"
 	"stringD.h"
 
@@ -169,22 +169,22 @@
 1645743669 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\stringd.cpp
 	"stringD.h"
 
-1645658468 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\listanum.cpp
+1645832525 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\listanum.cpp
 	"ListaNum.h"
 
-1645750609 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\main.cpp
+1645833933 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\main.cpp
 	<stdio.h>
 	"ABBSecuencias.h"
 	"Validaciones.h"
 
-1645749760 c:\users\nlaur\documents\github\taller\taller 1 prog 2\validaciones.h
+1645833933 c:\users\nlaur\documents\github\taller\taller 1 prog 2\validaciones.h
 	"ArregloPalabras.h"
 	"ArregloComandos.h"
 	"ABBSecuencias.h"
 
-1645658468 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\secuencia.cpp
+1645832760 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\secuencia.cpp
 	"Secuencia.h"
 
-1645749760 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\validaciones.cpp
+1645834104 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\validaciones.cpp
 	"Validaciones.h"
 

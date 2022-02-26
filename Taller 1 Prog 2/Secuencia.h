@@ -18,6 +18,8 @@ ListaNum devuelveLista(Secuencia sec);
 void cargarSecuencia (Secuencia &sec, stringD nomSec);
 //carga los valores identificador y numeros en la secuencia
 
+void mostrarPrimerSecuencia (Secuencia sec);
+
 void mostrarSecuencia (Secuencia sec);
 //despliega en pantalla los parametros de sec
 

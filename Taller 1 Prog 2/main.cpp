@@ -4,7 +4,7 @@
 
 int main()
 {
-    int opcion, i=0, j;
+    int opcion=9, i=0, j;
     char c;
     stringD texto1, texto2, textoCon, textoInt, textoCom, textoArch;
     ArregloPalabras arreP;
@@ -26,15 +26,19 @@ int main()
         strcrear(texto2);
         scan(texto2);
         cargarArregloP(arreP, texto2);
-        cantParamTotal(arreP);
-        strcrear(textoCom);
-        n_esimoPalabra(arreP, 0, textoCom);
-        opcion = 9;
-        if (!existeComando(textoCom, arreC))
-            mensajeError(0);
+        if (canttParamInvalido(arreP))
+            mensajeError(1);
         else
-            opcion = buscarComando(textoCom, arreC);
-        strdestruir(textoCom);
+        {
+            strcrear(textoCom);
+            n_esimoPalabra(arreP, 0, textoCom);
+            opcion = 9;
+            if (!existeComando(textoCom, arreC))
+                mensajeError(0);
+            else
+                opcion = buscarComando(textoCom, arreC);
+            strdestruir(textoCom);
+        }
         switch (opcion)
         {
             case 5:     /// COMANDO CREATE
@@ -54,6 +58,7 @@ int main()
                         {
                             cargarSecuencia(sec, textoCom);
                             insertarSecuencia(arbol, sec);
+                            mostrarPrimerSecuencia(sec);
                         }
                     }
                 }
@@ -65,10 +70,10 @@ int main()
                 else
                 {
                     if (esVacioABB(arbol))
-                        mensajeError(9); 
+                        mensajeError(9);
                     else
                     {
-                        printf("\nResultado:\n");  /// cambiar como se muestra
+                        printf("Resultado:\n");  /// cambiar como se muestra
                         mostrarEnOrden(arbol);
                     }
                 }
@@ -97,6 +102,7 @@ int main()
                                 sec2 = devuelveSec(arbol, textoCom);
                                 modificarLista(sec2, convertirString(textoInt));
                                 modificaArbol(arbol, sec2);
+                                mostrarPrimerSecuencia(sec2);
                             }
                         }
                     }
@@ -161,9 +167,7 @@ int main()
                 n_esimoPalabra(arreP, 1, textoCom);
                 n_esimoPalabra(arreP, 2, textoArch);
                 if (!esAlfabetico(textoCom))
-                {
                     mensajeError(2);
-                }
                 else
                 {
                     if(!Pertenece(arbol, textoCom)) /// Controlo existencia
@@ -202,7 +206,38 @@ int main()
                 strdestruir(textoArch);
                 break;
             case 3: /// COMANDO LOAD
-                strcrear(texto2);
+                strcrear(textoCom);
+                strcrear(textoArch);
+                n_esimoPalabra(arreP, 1, textoArch);
+                n_esimoPalabra(arreP, 2, textoCom);
+                if (!esNomArchivo(textoArch))
+                    mensajeError(3);
+                else
+                {
+                    if (!existeArchivo(textoArch))
+                        mensajeError(3);
+                    else
+                    {
+                        if (!esAlfabetico(textoCom))
+                            mensajeError(2);
+                        else
+                        {
+                            if(Pertenece(arbol, textoCom)) /// Controlo existencia
+                                mensajeError(5);
+                            else
+                            {
+                                crearLista(l);
+                                levantarLisArchivo(l,textoArch);
+                                cargarSecuencia(sec, textoCom);
+                                modificarSec(sec, l);
+                                insertarSecuencia(arbol, sec);
+                            }
+                        }
+                    }
+                }
+                strdestruir(textoCom);
+                strdestruir(textoArch);
+               /* strcrear(texto2);
                 printf("\nInserte el nombre del archivo:   ");
                 scan(texto2);
                 crearLista(l);
@@ -214,7 +249,7 @@ int main()
                 modificarSec(sec, l);
                 insertarSecuencia(arbol, sec);
                 strdestruir(texto1);
-                strdestruir(texto2);
+                strdestruir(texto2);*/
                 break;
             /*
             case 14: ///Es nombre de archivo
