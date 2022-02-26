@@ -339,6 +339,7 @@ int main()
             default:
                 break;
         }
+        strdestruir(texto);
     }while (opcion !=4);
     return 0;
 }
