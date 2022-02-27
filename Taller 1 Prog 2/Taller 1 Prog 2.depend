@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1645658467 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\abbsecuencias.cpp
+1645924510 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\abbsecuencias.cpp
 	"ABBSecuencias.h"
 
 1645740960 c:\users\nlaur\documents\github\taller\taller 1 prog 2\abbsecuencias.h
@@ -19,7 +19,7 @@
 1645740960 c:\users\nlaur\documents\github\taller\taller 1 prog 2\stringd.h
 	"boolean.h"
 
-1645749760 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\arreglocomandos.cpp
+1645924510 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\arreglocomandos.cpp
 	"ArregloComandos.h"
 
 1645749760 c:\users\nlaur\documents\github\taller\taller 1 prog 2\arreglocomandos.h
@@ -169,15 +169,15 @@
 1645743669 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\stringd.cpp
 	"stringD.h"
 
-1645832525 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\listanum.cpp
+1645924510 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\listanum.cpp
 	"ListaNum.h"
 
-1645839162 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\main.cpp
+1645924510 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\main.cpp
 	<stdio.h>
 	"ABBSecuencias.h"
 	"Validaciones.h"
 
-1645833933 c:\users\nlaur\documents\github\taller\taller 1 prog 2\validaciones.h
+1645924510 c:\users\nlaur\documents\github\taller\taller 1 prog 2\validaciones.h
 	"ArregloPalabras.h"
 	"ArregloComandos.h"
 	"ABBSecuencias.h"
@@ -185,6 +185,6 @@
 1645832760 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\secuencia.cpp
 	"Secuencia.h"
 
-1645834104 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\validaciones.cpp
+1645924510 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\validaciones.cpp
 	"Validaciones.h"
 

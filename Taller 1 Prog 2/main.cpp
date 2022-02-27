@@ -21,18 +21,15 @@ int main()
         scan(texto);
         cargarArregloP(arreP, texto);
         strdestruir(texto);
+        opcion = 9;
         if(devolverTope(arreP)==0)
             mensajeError(12);
         else if (cantParamInvalido(arreP))
-        {
             mensajeError(1);
-            opcion = 9;
-        }
         else
         {
             strcrear(textoCom);
             n_esimoPalabra(arreP, 0, textoCom);
-            opcion = 9;
             if (!existeComando(textoCom, arreC))
                 mensajeError(0);
             else
@@ -174,7 +171,7 @@ int main()
                                             modificarSec(sec, l);
                                             insertarSecuencia(arbol, sec);
                                             mostrarPrimerSecuencia(sec);
-                                            destruirLista(l);
+                                            //destruirLista(l);
                                         }
                                     }
                                     strdestruir(param3);
@@ -217,7 +214,7 @@ int main()
                                     modificarSec(sec, l);
                                     insertarSecuencia(arbol, sec);
                                     mostrarPrimerSecuencia(sec);
-                                    destruirLista(l);
+                                    //destruirLista(l);
                                 }
                             }
                             strdestruir(param2);
@@ -330,7 +327,7 @@ int main()
                                     modificarSec(sec, l);
                                     insertarSecuencia(arbol, sec);
                                     mostrarPrimerSecuencia(sec);
-                                    destruirLista(l);
+                                    //destruirLista(l);
                                 }
                             }
                             strdestruir(param2);
