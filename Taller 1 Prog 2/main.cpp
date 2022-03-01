@@ -255,7 +255,7 @@ int main()
                             {
                                 sec = devuelveSec(arbol, param1);
                                 if (ListaVacia(devuelveLista(sec)))
-                                    printf("Error"); /// agregar mensaje de error
+                                    mensajeError(10);
                                 else
                                 {
                                     if (existeArchivo(param2))
