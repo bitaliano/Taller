@@ -233,6 +233,7 @@ int main()
                 else
                 {
                     destruirABB(arbol);
+                    opcion = 9;
                     printf("Resultado:\t hasta la proxima\n");
                 }
                 break;
@@ -344,6 +345,6 @@ int main()
             default:
                 break;
         }
-    }while (opcion !=4);
+    }while (opcion !=9);
     return 0;
 }
