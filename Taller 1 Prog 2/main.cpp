@@ -229,11 +229,13 @@ int main()
                 break;
             case 4:     /// COMANDO EXIT
                 if (!cantParamCorrecta(arreP, darComando(arreC, 4)))
-                    mensajeError(1);
+                {
+                     opcion = 9;
+                     mensajeError(1);
+                }
                 else
                 {
                     destruirABB(arbol);
-                    opcion = 9;
                     printf("Resultado:\t hasta la proxima\n");
                 }
                 break;
@@ -345,6 +347,6 @@ int main()
             default:
                 break;
         }
-    }while (opcion !=9);
+    }while (opcion !=4);
     return 0;
 }

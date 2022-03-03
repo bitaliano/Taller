@@ -78,7 +78,7 @@
 1646317147 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\listanum.cpp
 	"ListaNum.h"
 
-1645763890 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\main.cpp
+1646342074 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\main.cpp
 	<stdio.h>
 	"ABBSecuencias.h"
 	"Validaciones.h"
@@ -89,10 +89,10 @@
 1645740478 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\stringd.cpp
 	"stringD.h"
 
-1645763890 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\validaciones.cpp
+1646334993 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\validaciones.cpp
 	"Validaciones.h"
 
-1645763567 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\validaciones.h
+1646317147 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\validaciones.h
 	"ArregloPalabras.h"
 	"ArregloComandos.h"
 	"ABBSecuencias.h"
