@@ -28,6 +28,21 @@ Secuencia devuelveSec (ABBSecuencias a, stringD ident)
     }
 }
 
+void modifSecArbol (ABBSecuencias &a, stringD ident, int n)
+{
+    if (streq(devuelveIdent(a->info), ident))
+    {
+        modificarLista(a->info,n);
+        mostrarPrimerSecuencia(a->info);
+    }
+    else
+    {
+        if (strmen(devuelveIdent(a->info), ident))
+            modifSecArbol (a->hder, ident, n);
+        else
+            modifSecArbol (a->hizq, ident, n);
+    }
+}
 
 ABBSecuencias HijoIzq (ABBSecuencias a)
 {

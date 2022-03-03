@@ -40,6 +40,21 @@ void mostrarSecuencia (Secuencia sec)
 	printf("\n");
 }
 
+void levantarLisArchivoEnSec (Secuencia &sec, stringD arch)
+{
+    levantarLisArchivo(sec.numeros,arch);
+}
+
+void copiarListaEnSec (ListaNum l, Secuencia &sec)
+{
+    copiarLista(l,sec.numeros);
+}
+
+void invertirListaEnSec (ListaNum l, Secuencia &sec)
+{
+    invertirLista(l,sec.numeros);
+}
+
 void modificarSec (Secuencia &sec, ListaNum l)
 {
     sec.numeros = l;

@@ -23,6 +23,12 @@ void mostrarPrimerSecuencia (Secuencia sec);
 void mostrarSecuencia (Secuencia sec);
 //despliega en pantalla los parametros de sec
 
+void levantarLisArchivoEnSec (Secuencia &sec, stringD arch);
+
+void copiarListaEnSec (ListaNum l, Secuencia &sec);
+
+void invertirListaEnSec (ListaNum l, Secuencia &sec);
+
 void modificarLista (Secuencia &sec, int num);
 //inserta el numero pasado por parametro en la lista de una secuencia
 

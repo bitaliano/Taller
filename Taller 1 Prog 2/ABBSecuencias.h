@@ -24,6 +24,8 @@ Secuencia DarRaiz (ABBSecuencias a); ///Pre condicion: ABB no vacio
 Secuencia devuelveSec (ABBSecuencias a, stringD ident); /// Pre condicion: existeSecuencia ident en el arbol a
 //dado un identificador devuelve la secuencia correspondiente cargado en el arbol
 
+void modifSecArbol (ABBSecuencias &a, stringD ident, int n);
+
 ABBSecuencias HijoIzq (ABBSecuencias a); ///Pre condicion: ABB no vacio
 //devuelve el hijo izq del arbol pasado como parametro
 

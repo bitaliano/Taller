@@ -1,0 +1,167 @@
+
+Ingrese comando:
+
+ERROR: El comando no puede ser vacio
+
+Ingrese comando: hola
+
+ERROR: El comando ingresado no existe
+
+Ingrese comando: hola como estas es muy largo
+
+ERROR: Cantidad de parametros incorrecta
+
+Ingrese comando: create
+
+ERROR: Cantidad de parametros incorrecta
+
+Ingrese comando: create 123
+
+ERROR: Los caracteres ingresados deben ser alfabeticos solamente
+
+Ingrese comando: create hola que tal
+
+ERROR: Cantidad de parametros incorrecta
+
+Ingrese comando: create hola
+Resultado:       hola = []
+
+Ingrese comando: create hola
+
+ERROR: El identificador ingresado ya existe en memoria
+
+Ingrese comando: insback hola
+
+ERROR: Cantidad de parametros incorrecta
+
+Ingrese comando: insback hola 1
+Resultado:       hola = [1]
+
+Ingrese comando: insback hola dos
+
+ERROR: El segundo parametro debe ser numerico
+
+Ingrese comando: insback hola 2
+Resultado:       hola = [1 2]
+
+Ingrese comando: insback hola 3
+Resultado:       hola = [1 2 3]
+
+Ingrese comando: insback hola 4
+Resultado:       hola = [1 2 3 4]
+
+Ingrese comando: insback hola 5
+Resultado:       hola = [1 2 3 4 5]
+
+Ingrese comando: create chau
+Resultado:       chau = []
+
+Ingrese comando: insback chau 6
+Resultado:       chau = [6]
+
+Ingrese comando: insback chau 7
+Resultado:       chau = [6 7]
+
+Ingrese comando: insback chau 8
+Resultado:       chau = [6 7 8]
+
+Ingrese comando: insback chau 9
+Resultado:       chau = [6 7 8 9]
+
+Ingrese comando: insback chau 10
+Resultado:       chau = [6 7 8 9 10]
+
+Ingrese comando: chow
+
+ERROR: El comando ingresado no existe
+
+Ingrese comando: show
+Resultado:
+                 chau = [6 7 8 9 10]
+                 hola = [1 2 3 4 5]
+
+Ingrese comando: sum hola
+Resultado:       15
+
+Ingrese comando: sum chau
+Resultado:       40
+
+Ingrese comando: sum holachau
+
+ERROR: El identificador ingresado no existe en memoria
+
+Ingrese comando: concat hola chau holachau
+Resultado:       holachau = [1 2 3 4 5 6 7 8 9 10]
+
+Ingrese comando: sum holachau
+Resultado:       55
+
+Ingrese comando: show
+Resultado:
+                 chau = [6 7 8 9 10]
+                 hola = [1 2 3 4 5]
+                 holachau = [1 2 3 4 5 6 7 8 9 10]
+
+Ingrese comando: reverse holachau holachauInvert
+Resultado:       holachauInvert = [10 9 8 7 6 5 4 3 2 1]
+
+Ingrese comando: show
+Resultado:
+                 chau = [6 7 8 9 10]
+                 hola = [1 2 3 4 5]
+                 holachau = [1 2 3 4 5 6 7 8 9 10]
+                 holachauInvert = [10 9 8 7 6 5 4 3 2 1]
+
+Ingrese comando: concat holachau holachauInvert
+
+ERROR: Cantidad de parametros incorrecta
+
+Ingrese comando: concat holachau holachauInvert nueva
+Resultado:       nueva = [1 2 3 4 5 6 7 8 9 10 10 9 8 7 6 5 4 3 2 1]
+
+Ingrese comando: show
+Resultado:
+                 chau = [6 7 8 9 10]
+                 hola = [1 2 3 4 5]
+                 holachau = [1 2 3 4 5 6 7 8 9 10]
+                 holachauInvert = [10 9 8 7 6 5 4 3 2 1]
+                 nueva = [1 2 3 4 5 6 7 8 9 10 10 9 8 7 6 5 4 3 2 1]
+
+Ingrese comando: save hola chau
+
+ERROR: El nombre del archivo debe finalizar en .txt
+
+Ingrese comando: save nueva nueva.txt
+Resultado:       nueva almacenada correctamente en nueva.txt
+
+Ingrese comando: save hola hola.txt
+Resultado:       hola almacenada correctamente en hola.txt
+
+Ingrese comando: save chau chau.txt
+Resultado:       chau almacenada correctamente en chau.txt
+
+Ingrese comando: load nueva.txt loadnueva
+Resultado:       loadnueva = [1 2 3 4 5 6 7 8 9 10 10 9 8 7 6 5 4 3 2 1]
+
+Ingrese comando: load hola.txt loadhola
+Resultado:       loadhola = [1 2 3 4 5]
+
+Ingrese comando: load chau.txt loadchau
+Resultado:       loadchau = [6 7 8 9 10]
+
+Ingrese comando: show
+Resultado:
+                 chau = [6 7 8 9 10]
+                 hola = [1 2 3 4 5]
+                 holachau = [1 2 3 4 5 6 7 8 9 10]
+                 holachauInvert = [10 9 8 7 6 5 4 3 2 1]
+                 loadchau = [6 7 8 9 10]
+                 loadhola = [1 2 3 4 5]
+                 loadnueva = [1 2 3 4 5 6 7 8 9 10 10 9 8 7 6 5 4 3 2 1]
+                 nueva = [1 2 3 4 5 6 7 8 9 10 10 9 8 7 6 5 4 3 2 1]
+
+Ingrese comando: exit
+Resultado:       hasta la proxima
+
+Process returned 0 (0x0)   execution time : 448.818 s
+Press any key to continue.

@@ -4,11 +4,11 @@
 
 int main()
 {
-    int opcion=9;
+    int opcion;
     char c;
     stringD param1, param2, param3, textoCom, texto;
     ArregloPalabras arreP;
-    Secuencia sec, sec2, secSum;
+    Secuencia sec;
     ABBSecuencias arbol;
     ListaNum l;
     ArregloComandos arreC;
@@ -96,10 +96,11 @@ int main()
                                 mensajeError(4);
                             else
                             {
-                                sec2 = devuelveSec(arbol, param1);
-                                modificarLista(sec2, convertirString(param2));
-                                modificaArbol(arbol, sec2);
-                                mostrarPrimerSecuencia(sec2);
+                                modifSecArbol(arbol,param1,convertirString(param2));
+                                //sec = devuelveSec(arbol, param1);
+                                //modificarLista(sec, convertirString(param2));
+                                //modificaArbol(arbol, sec);
+                                //mostrarPrimerSecuencia(sec);
                             }
                             strdestruir(param2);
                         }
@@ -122,8 +123,8 @@ int main()
                             mensajeError(6);
                         else
                         {
-                            secSum = devuelveSec(arbol, param1);
-                            printf("Resultado:\t %d\n", sumarValores(devuelveLista(secSum)));
+                            //sec = devuelveSec(arbol, param1);
+                            printf("Resultado:\t %d\n", sumarValores(devuelveLista(devuelveSec(arbol, param1))));
                         }
                     }
                     strdestruir(param1);
@@ -165,10 +166,12 @@ int main()
                                         else
                                         {
                                             cargarSecuencia(sec, param3);
-                                            crearLista(l);
-                                            copiarLista(devuelveLista(devuelveSec(arbol, param1)), l);
-                                            copiarLista(devuelveLista(devuelveSec(arbol, param2)), l);
-                                            modificarSec(sec, l);
+                                            //crearLista(l);
+                                            //copiarLista(devuelveLista(devuelveSec(arbol, param1)), l);
+                                            //copiarLista(devuelveLista(devuelveSec(arbol, param2)), l);
+                                            copiarListaEnSec(devuelveLista(devuelveSec(arbol, param1)), sec);
+                                            copiarListaEnSec(devuelveLista(devuelveSec(arbol, param2)), sec);
+                                            //modificarSec(sec, l);
                                             insertarSecuencia(arbol, sec);
                                             mostrarPrimerSecuencia(sec);
                                             //destruirLista(l);
@@ -209,9 +212,10 @@ int main()
                                 else
                                 {
                                     cargarSecuencia(sec, param2);
-                                    crearLista(l);
-                                    invertirLista(devuelveLista(devuelveSec(arbol, param1)), l);
-                                    modificarSec(sec, l);
+                                    //crearLista(l);
+                                    //invertirLista(devuelveLista(devuelveSec(arbol, param1)), l);
+                                    invertirListaEnSec(devuelveLista(devuelveSec(arbol, param1)), sec);
+                                    //modificarSec(sec, l);
                                     insertarSecuencia(arbol, sec);
                                     mostrarPrimerSecuencia(sec);
                                     //destruirLista(l);
@@ -321,10 +325,11 @@ int main()
                                     mensajeError(5);
                                 else
                                 {
-                                    crearLista(l);
-                                    levantarLisArchivo(l,param1);
+                                    //crearLista(l);
+                                    //levantarLisArchivo(l,param1);
                                     cargarSecuencia(sec, param2);
-                                    modificarSec(sec, l);
+                                    levantarLisArchivoEnSec(sec,param1);
+                                    //modificarSec(sec, l);
                                     insertarSecuencia(arbol, sec);
                                     mostrarPrimerSecuencia(sec);
                                     //destruirLista(l);
@@ -339,7 +344,6 @@ int main()
             default:
                 break;
         }
-        strdestruir(texto);
     }while (opcion !=4);
     return 0;
 }
