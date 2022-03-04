@@ -3,7 +3,7 @@
 
 #include "stringD.h"
 
-const int TAM=4;
+const int TAM=5;
 typedef struct{ stringD arre [TAM];
                 int tope;
               }ArregloPalabras;

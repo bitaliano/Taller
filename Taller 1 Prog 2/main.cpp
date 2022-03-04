@@ -10,7 +10,6 @@ int main()
     ArregloPalabras arreP;
     Secuencia sec;
     ABBSecuencias arbol;
-    ListaNum l;
     ArregloComandos arreC;
     levantarComandos(arreC, "arreCom.txt");
     CrearArbol(arbol);
@@ -70,7 +69,7 @@ int main()
                         mensajeError(9);
                     else
                     {
-                        printf("Resultado:\n");  /// cambiar como se muestra
+                        printf("Resultado:\n");
                         mostrarEnOrden(arbol);
                     }
                 }
@@ -86,7 +85,7 @@ int main()
                         mensajeError(2);
                     else
                     {
-                        if(!Pertenece(arbol, param1)) /// Controlo existencia
+                        if(!Pertenece(arbol, param1))
                             mensajeError(6);
                         else
                         {
@@ -97,10 +96,6 @@ int main()
                             else
                             {
                                 modifSecArbol(arbol,param1,convertirString(param2));
-                                //sec = devuelveSec(arbol, param1);
-                                //modificarLista(sec, convertirString(param2));
-                                //modificaArbol(arbol, sec);
-                                //mostrarPrimerSecuencia(sec);
                             }
                             strdestruir(param2);
                         }
@@ -123,7 +118,6 @@ int main()
                             mensajeError(6);
                         else
                         {
-                            //sec = devuelveSec(arbol, param1);
                             printf("Resultado:\t %d\n", sumarValores(devuelveLista(devuelveSec(arbol, param1))));
                         }
                     }
@@ -141,7 +135,7 @@ int main()
                         mensajeError(2);
                     else
                     {
-                        if(!Pertenece(arbol, param1)) /// Controlo existencia
+                        if(!Pertenece(arbol, param1))
                             mensajeError(6);
                         else
                         {
@@ -151,7 +145,7 @@ int main()
                                 mensajeError(2);
                             else
                             {
-                                if(!Pertenece(arbol, param2)) /// Controlo existencia
+                                if(!Pertenece(arbol, param2))
                                     mensajeError(6);
                                 else
                                 {
@@ -161,20 +155,15 @@ int main()
                                         mensajeError(2);
                                     else
                                     {
-                                        if(Pertenece(arbol, param3)) /// Controlo existencia
+                                        if(Pertenece(arbol, param3))
                                             mensajeError(5);
                                         else
                                         {
                                             cargarSecuencia(sec, param3);
-                                            //crearLista(l);
-                                            //copiarLista(devuelveLista(devuelveSec(arbol, param1)), l);
-                                            //copiarLista(devuelveLista(devuelveSec(arbol, param2)), l);
                                             copiarListaEnSec(devuelveLista(devuelveSec(arbol, param1)), sec);
                                             copiarListaEnSec(devuelveLista(devuelveSec(arbol, param2)), sec);
-                                            //modificarSec(sec, l);
                                             insertarSecuencia(arbol, sec);
                                             mostrarPrimerSecuencia(sec);
-                                            //destruirLista(l);
                                         }
                                     }
                                     strdestruir(param3);
@@ -197,7 +186,7 @@ int main()
                         mensajeError(2);
                     else
                     {
-                        if(!Pertenece(arbol, param1)) /// Controlo existencia
+                        if(!Pertenece(arbol, param1))
                             mensajeError(6);
                         else
                         {
@@ -207,18 +196,14 @@ int main()
                                 mensajeError(2);
                             else
                             {
-                                if(Pertenece(arbol, param2)) /// Controlo existencia
+                                if(Pertenece(arbol, param2))
                                     mensajeError(5);
                                 else
                                 {
                                     cargarSecuencia(sec, param2);
-                                    //crearLista(l);
-                                    //invertirLista(devuelveLista(devuelveSec(arbol, param1)), l);
                                     invertirListaEnSec(devuelveLista(devuelveSec(arbol, param1)), sec);
-                                    //modificarSec(sec, l);
                                     insertarSecuencia(arbol, sec);
                                     mostrarPrimerSecuencia(sec);
-                                    //destruirLista(l);
                                 }
                             }
                             strdestruir(param2);
@@ -250,7 +235,7 @@ int main()
                         mensajeError(2);
                     else
                     {
-                        if(!Pertenece(arbol, param1)) /// Controlo existencia
+                        if(!Pertenece(arbol, param1))
                             mensajeError(6);
                         else
                         {
@@ -303,7 +288,7 @@ int main()
                     strdestruir(param1);
                 }
                 break;
-            case 3: /// COMANDO LOAD
+            case 3:     /// COMANDO LOAD
                 if (!cantParamCorrecta(arreP, darComando(arreC, 3)))
                     mensajeError(1);
                 else
@@ -324,18 +309,14 @@ int main()
                                 mensajeError(2);
                             else
                             {
-                                if(Pertenece(arbol, param2)) /// Controlo existencia
+                                if(Pertenece(arbol, param2))
                                     mensajeError(5);
                                 else
                                 {
-                                    //crearLista(l);
-                                    //levantarLisArchivo(l,param1);
                                     cargarSecuencia(sec, param2);
                                     levantarLisArchivoEnSec(sec,param1);
-                                    //modificarSec(sec, l);
                                     insertarSecuencia(arbol, sec);
                                     mostrarPrimerSecuencia(sec);
-                                    //destruirLista(l);
                                 }
                             }
                             strdestruir(param2);

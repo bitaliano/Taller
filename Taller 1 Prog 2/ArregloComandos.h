@@ -12,9 +12,6 @@ void levantarComandos (ArregloComandos &arreC, stringD fileName);
 void n_esimoComando (ArregloComandos arre, int num, stringD &s);
 //devuelve el string cargado en la posicion num del arreglo
 
-//boolean existeComando (ArregloComandos arre, stringD s);
-//devuelve TRUE si el string pasado por parametro es un comando existente en el arreglo
-
 void destruirComandos (ArregloComandos arre);
 //recorre el arreglo y destruye los strings
 
@@ -22,5 +19,6 @@ void bajarComandos(ArregloComandos arreC, stringD fileName);
 //abre el archivo y baja el arreglo con los comandos al archivo
 
 Comando darComando (ArregloComandos arre, int num);
+// dada una posicion del arreglo, devuelve el comando almacenado en esa posicion
 
 #endif // ARREGLOCOMANDOS_H_INCLUDED

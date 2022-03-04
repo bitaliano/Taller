@@ -25,6 +25,7 @@ Secuencia devuelveSec (ABBSecuencias a, stringD ident); /// Pre condicion: exist
 //dado un identificador devuelve la secuencia correspondiente cargado en el arbol
 
 void modifSecArbol (ABBSecuencias &a, stringD ident, int n);
+// dado un identificador de secuencia, busca la secuencia en el ABB y modifica la lista insertando n al final de la misma
 
 ABBSecuencias HijoIzq (ABBSecuencias a); ///Pre condicion: ABB no vacio
 //devuelve el hijo izq del arbol pasado como parametro
@@ -36,7 +37,7 @@ void insertarSecuencia (ABBSecuencias &a, Secuencia sec); /// Pre condicion: La 
 //inserta una secuencia en el arbol ordenada alfabeticamente segun su identificador
 
 boolean Pertenece (ABBSecuencias a, stringD ident);
-//Devueluve TRUE si una secuencia pertenece al arbol
+//Devuelve TRUE si una secuencia pertenece al arbol
 
 void modificaArbol (ABBSecuencias &a, Secuencia sec);
 //modifica la secuencia pasada por parámetro en el ABB
@@ -49,10 +50,6 @@ ABBSecuencias constructABB (Secuencia raiz, ABBSecuencias i, ABBSecuencias  d);
 
 void destruirABB (ABBSecuencias &a);
 // libera la memoria ocupada por el arbol y lo deja nulo
-
-
-
-
 
 
 #endif // ABBSECUENCIAS_H_INCLUDED

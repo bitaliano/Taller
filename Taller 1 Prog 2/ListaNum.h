@@ -29,12 +29,11 @@ void insertarAtras (ListaNum &l, int num);
 void bajarLisArchivo (ListaNum l, stringD arch); /// Pre condicion: lista no vacia
 //abre el archivo, baja la lista al archivo y cierra el archivo
 
-void levantarLisArchivo (ListaNum &l, stringD arch);
+void levantarLisArchivo (ListaNum &l, stringD arch); /// Pre condicion: el archivo debe existir
 //abre el archivo y crea la lista con los numeros del archivo
-//PRECONDICIoN: el archivo debe existir
 
 void destruirLista (ListaNum &l);
-/* liberala memoria ocupada por la lista y deja el puntero nulo*/
+// liberala memoria ocupada por la lista y deja el puntero nulo
 
 void copiarLista (ListaNum lOrigen, ListaNum &lCopia);
 //copia una lista origen al final de otra lista

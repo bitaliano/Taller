@@ -1,15 +1,5 @@
 #include "Validaciones.h"
 
-/*
-void cantParamTotal (ArregloPalabras arreP)
-{
-    if (devolverTope(arreP) == 5)
-    {
-        resetearArregloP(arreP);
-        mensajeError(1);
-    }
-}*/
-
 boolean cantParamInvalido (ArregloPalabras arreP)
 {
     boolean lleno=FALSE;

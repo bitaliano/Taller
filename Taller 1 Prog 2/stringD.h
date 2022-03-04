@@ -39,19 +39,14 @@ boolean strmen (stringD s1,stringD s2);
 boolean streq (stringD s1,stringD s2);
 // recibe dos strings y devuelve TRUE si ambos strings son iguales o FALSE en caso contrario.
 
+int convertirString (stringD s);  /// Precondición: s esNumerico
+//convierte strings numéricos en números enteros
 
-int convertirString (stringD s);  
-//convierte strings numéricos en números enteros 
-//PRECONDICIÓN: s esNumerico 
-
-
-void Bajar_String (stringD s, FILE * f);
+void Bajar_String (stringD s, FILE * f); /// Precondición: El archivo viene abierto para escritura.
 // Escribe en el archivo los caracteres del string s (incluido '\0')
-// Precondición: El archivo viene abierto para escritura.
 
-void Levantar_String (stringD &s, FILE * f);
+void Levantar_String (stringD &s, FILE * f); /// Precondición: El archivo viene abierto
 // Lee desde el archivo los caracteres del string s.
-// Precondición: El archivo viene abierto
 
 
 

@@ -55,11 +55,6 @@ void invertirListaEnSec (ListaNum l, Secuencia &sec)
     invertirLista(l,sec.numeros);
 }
 
-void modificarSec (Secuencia &sec, ListaNum l)
-{
-    sec.numeros = l;
-}
-
 void modificarLista (Secuencia &sec, int num)
 {
     insertarAtras(sec.numeros, num);
