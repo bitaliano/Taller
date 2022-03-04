@@ -145,17 +145,17 @@ boolean streq (stringD s1,stringD s2)
 
 int convertirString (stringD s)
 {
-	int i = 0, j, num = 0, largo, coef =1;
-	largo = strlar(s);
-	for (j=1; j<largo; j++)
-		coef = coef*10;
-	while (s[i]!='\0')
-	{
+    int i = 0, j, num = 0, largo, coef =1;
+    largo = strlar(s);
+    for (j = 1; j<largo; j++)
+    	coef = coef*10;
+    while (s[i]!='\0')
+    {
         num = (s[i]-48) * coef + num;
-        if(coef>1)
+        if(coef > 1)
             coef = coef/10;
 		i++;
-	}
+    }
     return num;
 }
 
