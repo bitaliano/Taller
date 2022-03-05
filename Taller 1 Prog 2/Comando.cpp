@@ -30,3 +30,8 @@ void bajarComArchivo (Comando &com, FILE *f)
     Bajar_String (com.comand, f);
 	fwrite(&com.param, sizeof(int), 1, f);
 }
+
+void destruircomando (Comando &com)
+{
+    strdestruir(com.comand);
+}

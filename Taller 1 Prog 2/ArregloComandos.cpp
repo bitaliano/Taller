@@ -28,12 +28,13 @@ Comando darComando (ArregloComandos arre, int num)
 
 void destruirComandos (ArregloComandos arre)
 {
-    stringD s;
-    strcrear(s);
+    //stringD s;
+    //strcrear(s);
     for (int i = 0; i < N; i++)
     {
-        devuelveNomCom(arre[i],s);
-        strdestruir(s);
+        //devuelveNomCom(arre[i],s);
+        //strdestruir(s);
+        destruircomando(arre[i]);
     }
 }
 

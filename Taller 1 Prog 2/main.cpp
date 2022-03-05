@@ -221,6 +221,7 @@ int main()
                 else
                 {
                     destruirABB(arbol);
+                    destruirComandos(arreC);
                     printf("Resultado:\t hasta la proxima\n");
                 }
                 break;

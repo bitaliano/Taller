@@ -13,7 +13,7 @@ void n_esimoComando (ArregloComandos arre, int num, stringD &s);
 //devuelve el string cargado en la posicion num del arreglo
 
 void destruirComandos (ArregloComandos arre);
-//recorre el arreglo y destruye los strings
+//recorre el arreglo y destruye los strings de cada comando
 
 void bajarComandos(ArregloComandos arreC, stringD fileName);
 //abre el archivo y baja el arreglo con los comandos al archivo

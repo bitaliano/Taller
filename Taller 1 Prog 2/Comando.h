@@ -23,4 +23,7 @@ void levantarComArchivo (Comando &com, FILE *f);
 void bajarComArchivo (Comando &com, FILE *f);
 //recibe el archivo abierto y baja el comando
 
+void destruircomando (Comando &com);
+//destruye el string almacenado en comand
+
 #endif // COMANDO_H_INCLUDED
