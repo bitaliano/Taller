@@ -19,7 +19,7 @@
 1646354930 c:\users\nlaur\documents\github\taller\taller 1 prog 2\stringd.h
 	"boolean.h"
 
-1646490051 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\arreglocomandos.cpp
+1646498989 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\arreglocomandos.cpp
 	"ArregloComandos.h"
 
 1646498989 c:\users\nlaur\documents\github\taller\taller 1 prog 2\arreglocomandos.h
@@ -34,7 +34,7 @@
 1645142758 c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\boolean.h
 	<stdio.h>
 
-1646267495 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\arreglopalabras.cpp
+1646500780 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\arreglopalabras.cpp
 	"ArregloPalabras.h"
 
 1646354930 c:\users\nlaur\documents\github\taller\taller 1 prog 2\arreglopalabras.h
@@ -43,7 +43,7 @@
 1644711592 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\boolean.cpp
 	"boolean.h"
 
-1645658468 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\comando.cpp
+1646499074 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\comando.cpp
 	"Comando.h"
 
 1646317147 source:c:\users\bital\onedrive\documentos\github\taller\taller 1 prog 2\abbsecuencias.cpp
@@ -172,7 +172,7 @@
 1646274730 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\listanum.cpp
 	"ListaNum.h"
 
-1646273549 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\main.cpp
+1646500844 source:c:\users\nlaur\documents\github\taller\taller 1 prog 2\main.cpp
 	<stdio.h>
 	"ABBSecuencias.h"
 	"Validaciones.h"

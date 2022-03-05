@@ -15,14 +15,11 @@ void cargarArregloP (ArregloPalabras &arreP, stringD texto)
     {
         if ((texto[i]==' ') && (texto[i+1]!=' ') && (texto[i+1]!='\0'))
         {
-            //Guardo indice de comienzo palabra
+            //Guardo indice de comienzo palabra si no llegue al maximo de parametros permitidos
             if (arreP.tope==4)
-            {
-                //mensajeError(1);
                 lleno = TRUE;
-                //resetearArregloP (arreP);
-            }
-            k=i+1;
+            else
+                k=i+1;
         }
         else
         {
@@ -42,8 +39,7 @@ void cargarArregloP (ArregloPalabras &arreP, stringD texto)
 
 void mostrarArregloP (ArregloPalabras arreP)
 {
-    int i;
-    for (i=0; i<arreP.tope; i++)
+    for (int i=0; i<arreP.tope; i++)
     {
         print(arreP.arre[i]);
         printf("\n");
@@ -52,10 +48,8 @@ void mostrarArregloP (ArregloPalabras arreP)
 
 void resetearArregloP (ArregloPalabras &arreP)
 {
-    for (int i = 0; i < TAM; i++)
-    {
+    for (int i = 0; i < arreP.tope; i++)
         strdestruir(arreP.arre[i]);
-    }
     arreP.tope = 0;
 }
 

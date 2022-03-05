@@ -329,6 +329,7 @@ int main()
             default:
                 break;
         }
+        resetearArregloP(arreP);
     }while (opcion !=4);
     return 0;
 }
