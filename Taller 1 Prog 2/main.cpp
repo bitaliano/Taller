@@ -21,7 +21,7 @@ int main()
         cargarArregloP(arreP, texto);
         strdestruir(texto);
         opcion = 9;
-        if(devolverTope(arreP)==0)
+        if(esVacioArreP(arreP))
             mensajeError(12);
         else if (cantParamInvalido(arreP))
             mensajeError(1);

@@ -66,9 +66,8 @@ int devolverTope (ArregloPalabras arreP)
 
 boolean esVacioArreP (ArregloPalabras arreP)
 {
-    int i = devolverTope(arreP);
-    boolean iguales = FALSE;
-    if (i == 0)
-        iguales = TRUE;
-    return iguales;
+    boolean vacio = FALSE;
+    if (devolverTope(arreP) == 0)
+        vacio = TRUE;
+    return vacio;
 }
