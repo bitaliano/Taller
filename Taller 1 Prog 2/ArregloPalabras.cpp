@@ -34,7 +34,11 @@ void cargarArregloP (ArregloPalabras &arreP, stringD texto)
         i++;
     }
     if (texto[i]!='\0')
+    {
+        strcrear(arreP.arre[arreP.tope]);
         arreP.tope ++;
+    }
+
 }
 
 void mostrarArregloP (ArregloPalabras arreP)
