@@ -1,7 +1,6 @@
 #ifndef LISTANUM_H_INCLUDED
 #define LISTANUM_H_INCLUDED
 
-#include "boolean.h"
 #include "stringD.h"
 
 typedef struct nodoL{
