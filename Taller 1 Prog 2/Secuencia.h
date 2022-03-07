@@ -2,7 +2,6 @@
 #define SECUENCIA_H_INCLUDED
 
 #include "ListaNum.h"
-#include "stringD.h"
 
 typedef struct{ stringD id;
                 ListaNum numeros;
