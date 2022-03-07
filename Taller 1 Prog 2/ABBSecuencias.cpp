@@ -87,18 +87,6 @@ boolean Pertenece (ABBSecuencias a, stringD ident)
     }
 }
 
-/*void modificaArbol (ABBSecuencias &a, Secuencia sec)
-{
-    if(streq(devuelveIdent(a->info), devuelveIdent(sec)))
-        a->info = sec;
-    else
-    {
-        if (strmen(devuelveIdent(a->info), devuelveIdent(sec)))
-            modificaArbol(a->hder, sec);
-        else
-            modificaArbol(a->hizq, sec);
-    }
-}*/
 
 void mostrarEnOrden (ABBSecuencias a)
 {
@@ -109,15 +97,6 @@ void mostrarEnOrden (ABBSecuencias a)
         mostrarEnOrden(a->hder);
     }
 }
-
-/*ABBSecuencias constructABB (Secuencia raiz, ABBSecuencias i, ABBSecuencias  d)
-{
-    ABBSecuencias a = new nodoSecuencia;
-    a -> info = raiz;
-    a -> hizq = i;
-    a -> hder = d;
-    return a;
-}*/
 
 
 void destruirABB (ABBSecuencias &a)

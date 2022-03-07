@@ -39,14 +39,10 @@ void insertarSecuencia (ABBSecuencias &a, Secuencia sec); /// Pre condicion: La 
 boolean Pertenece (ABBSecuencias a, stringD ident);
 //Devuelve TRUE si una secuencia pertenece al arbol
 
-/*void modificaArbol (ABBSecuencias &a, Secuencia sec);
-//modifica la secuencia pasada por parámetro en el ABB*/
 
 void mostrarEnOrden (ABBSecuencias a); ///Pre condicion: ABB no vacio
 //recorre el arbol de la forma: izq-raiz-der y muestra en pantalla las secuencias en ese orden
 
-/*ABBSecuencias constructABB (Secuencia raiz, ABBSecuencias i, ABBSecuencias  d);
-//dada una secuencia raiz, construye el ABB.*/
 
 void destruirABB (ABBSecuencias &a);
 // libera la memoria ocupada por el arbol y lo deja nulo
