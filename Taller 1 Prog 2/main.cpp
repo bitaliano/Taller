@@ -58,6 +58,7 @@ int main()
                     }
                     strdestruir(param1);
                 }
+                resetearArregloP(arreP);
                 break;
             case 1:     /// COMANDO SHOW
                 if (!cantParamCorrecta(arreP, darComando(arreC, 1)))
@@ -72,6 +73,7 @@ int main()
                         mostrarEnOrden(arbol);
                     }
                 }
+                resetearArregloP(arreP);
                 break;
             case 8:     /// COMANDO INSBACK
                 if (!cantParamCorrecta(arreP, darComando(arreC, 8)))
@@ -101,6 +103,7 @@ int main()
                     }
                     strdestruir(param1);
                 }
+                resetearArregloP(arreP);
                 break;
             case 0:     /// COMANDO SUM
                 if (!cantParamCorrecta(arreP, darComando(arreC, 0)))
@@ -122,6 +125,7 @@ int main()
                     }
                     strdestruir(param1);
                 }
+                resetearArregloP(arreP);
                 break;
             case 6:     /// COMANDO CONCAT
                 if (!cantParamCorrecta(arreP, darComando(arreC, 6)))
@@ -173,6 +177,7 @@ int main()
                     }
                     strdestruir(param1);
                 }
+                resetearArregloP(arreP);
                 break;
             case 7:     /// COMANDO REVERSE
                 if (!cantParamCorrecta(arreP, darComando(arreC, 7)))
@@ -210,6 +215,7 @@ int main()
                     }
                     strdestruir(param1);
                 }
+                resetearArregloP(arreP);
                 break;
             case 4:     /// COMANDO EXIT
                 if (!cantParamCorrecta(arreP, darComando(arreC, 4)))
@@ -223,6 +229,7 @@ int main()
                     destruirComandos(arreC);
                     printf("Resultado:\t hasta la proxima\n");
                 }
+                resetearArregloP(arreP);
                 break;
             case 2:     /// COMANDO SAVE
                 if (!cantParamCorrecta(arreP, darComando(arreC, 2)))
@@ -245,8 +252,8 @@ int main()
                                 mensajeError(3);
                             else
                             {
-                                sec = devuelveSec(arbol, param1);
-                                if (ListaVacia(devuelveLista(sec)))
+                                //sec = devuelveSec(arbol, param1);
+                                if (secuenciaVacia(devuelveSec(arbol, param1)))
                                     mensajeError(10);
                                 else
                                 {
@@ -261,7 +268,8 @@ int main()
                                             scanf("%c", &c);
                                             if( c == 'S' || c == 's')
                                             {
-                                                bajarLisArchivo(devuelveLista(sec),param2);
+                                                bajarLista (devuelveSec(arbol, param1), param2);
+                                                //bajarLisArchivo(devuelveLista(sec),param2);
                                                 printf ("Resultado:\t ");
                                                 print(param1);
                                                 printf(" almacenada correctamente en ");
@@ -287,6 +295,7 @@ int main()
                     }
                     strdestruir(param1);
                 }
+                resetearArregloP(arreP);
                 break;
             case 3:     /// COMANDO LOAD
                 if (!cantParamCorrecta(arreP, darComando(arreC, 3)))
@@ -324,11 +333,12 @@ int main()
                     }
                     strdestruir(param1);
                 }
+                resetearArregloP(arreP);
                 break;
             default:
                 break;
         }
-        resetearArregloP(arreP);
+        //resetearArregloP(arreP);
     }while (opcion !=4);
     return 0;
 }

@@ -35,4 +35,8 @@ void invertirListaEnSec (ListaNum l, Secuencia &sec);
 void modificarLista (Secuencia &sec, int num);
 //inserta el numero pasado por parametro en la lista de una secuencia
 
+void bajarLista (Secuencia sec, stringD param2);
+
+boolean secuenciaVacia (Secuencia sec);
+
 #endif // SECUENCIA_H_INCLUDED

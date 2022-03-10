@@ -59,3 +59,17 @@ void modificarLista (Secuencia &sec, int num)
 {
     insertarAtras(sec.numeros, num);
 }
+
+void bajarLista (Secuencia sec, stringD param2)
+{
+    bajarLisArchivo(sec.numeros,param2);
+}
+
+boolean secuenciaVacia (Secuencia sec)
+{
+    boolean vacia = FALSE;
+    if (ListaVacia (sec.numeros))
+        vacia = TRUE;
+    return vacia;
+}
+
